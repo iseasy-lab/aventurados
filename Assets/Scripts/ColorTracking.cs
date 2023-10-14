@@ -4,7 +4,7 @@ using OpenCvSharp;
 using System.Threading.Tasks;
 
 //**********************************
-//Script para detectar el color rojo
+//Script para detectar el color rojo y el verde
 //**********************************
 
 public class ColorTracking : MonoBehaviour
@@ -17,11 +17,18 @@ public class ColorTracking : MonoBehaviour
     private Mat kernel;
     // Variable para almacenar el estado del movimiento
     private bool hayMovimiento = false;
+    // Variable para almacenar el estado del movimiento de color rojo
+    private bool hayMovimientoRojo = false;
+    // Variable para almacenar el estado del movimiento de color verde
+    private bool hayMovimientoVerde = false;
     // Variable para almacenar el fotograma anterior
     private Mat prevFrame = null;
     // Variable para almacenar el umbral de diferencia
-    //private double threshold = 4.5;
     private double threshold = 5;
+    // Variable para almacenar el número de objetos de color rojo
+    private int num_objects_red = 0;
+    // Variable para almacenar el número de objetos de color verde
+    private int num_objects_green = 0;
 
     void Start()
     {
@@ -38,11 +45,12 @@ public class ColorTracking : MonoBehaviour
     {
         // Obtener el fotograma actual de forma asíncrona
         Mat frame = await GetFrameAsync();
-        // Mostrar el resultado si hay movimiento
-        if (hayMovimiento)
+        // Mostrar el resultado solo si hay movimiento y hay movimiento de color rojo o verde
+        if (hayMovimientoRojo || hayMovimientoVerde)
+        //if (hayMovimiento && (hayMovimientoRojo || hayMovimientoVerde))
         {
-            Cv2.ImShow("Red Color Detection", frame);
-            Debug.Log("Se ha detectado un objeto de color rojo que se mueve");
+            Cv2.ImShow("Color Detection", frame);
+            Debug.Log("Se ha detectado un objeto de color rojo o verde que se mueve");
             // Aquí se puede agregar más código para hacer algo con el objeto detectado
         }
 
@@ -71,30 +79,59 @@ public class ColorTracking : MonoBehaviour
         if (mean < threshold)
         {
             hayMovimiento = false;
+            hayMovimientoRojo = false;
+            hayMovimientoVerde = false;
+            num_objects_red = 0;
+            num_objects_green = 0;
+            Debug.Log("No hay objetos");
             return frame;
         }
 
-        // Convertir el fotograma a escala de grises
-        Mat gray = new Mat();
-        Cv2.CvtColor(frame, gray, ColorConversionCodes.BGR2GRAY);
-        // Aplicar la sustracción de fondo
-        Mat fgMask = new Mat();
-        backgroundSubtractor.Apply(gray, fgMask);
-        // Aplicar la operación morfológica de cierre
-        Mat closed = new Mat();
-        Cv2.MorphologyEx(fgMask, closed, MorphTypes.Close, kernel);
-        // Encontrar los contornos de los objetos en movimiento
-        Point[][] contours;
-        HierarchyIndex[] hierarchy;
-        Cv2.FindContours(closed, out contours, out hierarchy, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
-        // Contar el número de contornos encontrados
-        int num_objects = contours.Length;
+        // Convertir el fotograma a HSV
+        Mat hsv = new Mat();
+        Cv2.CvtColor(frame, hsv, ColorConversionCodes.BGR2HSV);
 
-        // Si hay al menos un contorno, mostrar un mensaje y dibujar los contornos
-        if (num_objects > 0)
+        // Definir el rango de color rojo en HSV
+        Scalar lower_red = new Scalar(0, 120, 70);
+        Scalar upper_red = new Scalar(10, 255, 255);
+
+        // Definir el rango de color verde en HSV
+        Scalar lower_green = new Scalar(36, 25, 25);
+        Scalar upper_green = new Scalar(86, 255, 255);
+
+        // Crear una máscara binaria para el color rojo y otra para el color verde
+        Mat red_mask = new Mat();
+        Mat green_mask = new Mat();
+        Cv2.InRange(hsv, lower_red, upper_red, red_mask);
+        Cv2.InRange(hsv, lower_green, upper_green, green_mask);
+
+        // Aplicar la operación morfológica de cierre a cada máscara
+        Mat closed_red = new Mat();
+        Mat closed_green = new Mat();
+        Cv2.MorphologyEx(red_mask, closed_red, MorphTypes.Close, kernel);
+        Cv2.MorphologyEx(green_mask, closed_green, MorphTypes.Close, kernel);
+
+        // Encontrar los contornos de los objetos rojos y verdes usando las máscaras correspondientes
+        Point[][] contours_red;
+        Point[][] contours_green;
+        HierarchyIndex[] hierarchy_red;
+        HierarchyIndex[] hierarchy_green;
+        Cv2.FindContours(closed_red, out contours_red, out hierarchy_red, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
+        Cv2.FindContours(closed_green, out contours_green, out hierarchy_green, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
+
+        // Contar el número de contornos encontrados y asignarlo a las variables
+        num_objects_red = contours_red.Length;
+        num_objects_green = contours_green.Length;
+
+        // Asignar el valor true a las variables booleanas si hay al menos un contorno de cada color, y false en caso contrario
+        hayMovimientoRojo = num_objects_red > 0;
+        hayMovimientoVerde = num_objects_green > 0;
+
+        // Si hay al menos un contorno de cada color, mostrar un mensaje y dibujar los contornos
+        if (hayMovimientoRojo || hayMovimientoVerde)
         {
             // Definir el texto del mensaje
-            string message = $"Se han detectado {num_objects} objetos de color rojo.";
+            string message = $"Se han detectado {num_objects_red} objetos de color rojo y {num_objects_green} objetos de color verde.";
             // Definir la posición del mensaje
             Point position = new Point(10, 30);
             // Definir el color del mensaje
@@ -105,18 +142,18 @@ public class ColorTracking : MonoBehaviour
             double size = 1.0;
             // Escribir el mensaje en el fotograma original
             Cv2.PutText(frame, message, position, font, size, color);
-            // Definir el color de los contornos
-            Scalar contour_color = Scalar.Blue;
+            // Definir el color de los contornos rojos
+            Scalar contour_color_red = Scalar.Red;
+            // Definir el color de los contornos verdes
+            Scalar contour_color_green = Scalar.Green;
             // Definir el grosor de los contornos
             int contour_thickness = 2;
             // Dibujar los contornos en el fotograma original
-            Cv2.DrawContours(frame, contours, -1, contour_color, contour_thickness);
+            Cv2.DrawContours(frame, contours_red, -1, contour_color_red, contour_thickness);
+            Cv2.DrawContours(frame, contours_green, -1, contour_color_green, contour_thickness);
             // Asignar el valor true a la variable booleana
             hayMovimiento = true;
         }
-
-        // Mostrar el fotograma con la diferencia resaltada en una ventana aparte
-        Cv2.ImShow("Frame Difference", diff);
 
         return frame;
     }
