@@ -20,7 +20,8 @@ public class ColorTracking : MonoBehaviour
     // Variable para almacenar el fotograma anterior
     private Mat prevFrame = null;
     // Variable para almacenar el umbral de diferencia
-    private double threshold = 4.5;
+    //private double threshold = 4.5;
+    private double threshold = 5;
 
     void Start()
     {
