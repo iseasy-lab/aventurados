@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using OpenCvSharp;
 using System.Threading.Tasks;
+using System.Threading;
 
 //**********************************
 //Script para detectar el color rojo y el verde
@@ -33,6 +34,7 @@ public class ColorTracking : MonoBehaviour
     void Start()
     {
         // Inicializar el video
+
         webcamTexture = new WebCamTexture();
         webcamTexture.Play();
         // Inicializar el fondo
@@ -43,17 +45,24 @@ public class ColorTracking : MonoBehaviour
 
     async void Update()
     {
-        // Obtener el fotograma actual de forma asíncrona
-        Mat frame = await GetFrameAsync();
-        // Mostrar el resultado solo si hay movimiento y hay movimiento de color rojo o verde
-        if (hayMovimientoRojo || hayMovimientoVerde)
-        //if (hayMovimiento && (hayMovimientoRojo || hayMovimientoVerde))
+        // Obtener el número de fotogramas desde el inicio
+        int frameCount = Time.frameCount;
+        // Definir el divisor para reducir la frecuencia de análisis
+        int divisor = 4;
+        // Comprobar si el fotograma actual es divisible por el divisor
+        if (frameCount % divisor == 0)
         {
-            Cv2.ImShow("Color Detection", frame);
-            Debug.Log("Se ha detectado un objeto de color rojo o verde que se mueve");
-            // Aquí se puede agregar más código para hacer algo con el objeto detectado
+            // Obtener el fotograma actual de forma asíncrona
+            Mat frame = await GetFrameAsync();
+            // Mostrar el resultado solo si hay movimiento y hay movimiento de color rojo o verde
+            if (hayMovimientoRojo || hayMovimientoVerde)
+            //if (hayMovimiento && (hayMovimientoRojo || hayMovimientoVerde))
+            {
+                Cv2.ImShow("Color Detection", frame);
+                Debug.Log("Se ha detectado un objeto de color rojo o verde que se mueve");
+                // Aquí se puede agregar más código para hacer algo con el objeto detectado
+            }
         }
-
     }
 
     async Task<Mat> GetFrameAsync()
@@ -84,7 +93,8 @@ public class ColorTracking : MonoBehaviour
             num_objects_red = 0;
             num_objects_green = 0;
             Debug.Log("No hay objetos");
-            return frame;
+            Thread.Sleep(1000); //duerme el programa por 1s
+            return null;
         }
 
         // Convertir el fotograma a HSV
@@ -152,6 +162,7 @@ public class ColorTracking : MonoBehaviour
             Cv2.DrawContours(frame, contours_red, -1, contour_color_red, contour_thickness);
             Cv2.DrawContours(frame, contours_green, -1, contour_color_green, contour_thickness);
             // Asignar el valor true a la variable booleana
+            Thread.Sleep(1000);
             hayMovimiento = true;
         }
 
