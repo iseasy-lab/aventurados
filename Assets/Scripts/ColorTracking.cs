@@ -25,7 +25,7 @@ public class ColorTracking : MonoBehaviour
     // Variable para almacenar el fotograma anterior
     private Mat prevFrame = null;
     // Variable para almacenar el umbral de diferencia
-    private double threshold = 5;
+    private double threshold = 1;
     // Variable para almacenar el número de objetos de color rojo
     private int num_objects_red = 0;
     // Variable para almacenar el número de objetos de color verde
@@ -93,7 +93,8 @@ public class ColorTracking : MonoBehaviour
             num_objects_red = 0;
             num_objects_green = 0;
             Debug.Log("No hay objetos");
-            Thread.Sleep(1000); //duerme el programa por 1s
+            //Modificando los colores ya no se necesita reducir los frames analziados por segundo
+            //Thread.Sleep(1000/60); //duerme el programa por 1s 
             return null;
         }
 
@@ -102,12 +103,14 @@ public class ColorTracking : MonoBehaviour
         Cv2.CvtColor(frame, hsv, ColorConversionCodes.BGR2HSV);
 
         // Definir el rango de color rojo en HSV
-        Scalar lower_red = new Scalar(0, 120, 70);
-        Scalar upper_red = new Scalar(10, 255, 255);
+        //Buscar un color específico para que solo se léa ese color y no los que se parecen
+        Scalar lower_red = new Scalar(0, 100, 98);
+        Scalar upper_red = new Scalar(0, 100, 100);
 
         // Definir el rango de color verde en HSV
-        Scalar lower_green = new Scalar(36, 25, 25);
-        Scalar upper_green = new Scalar(86, 255, 255);
+        //Buscar un color específico para que solo se léa ese color y no los que se parecen
+        Scalar lower_green = new Scalar(120, 100, 60);      
+        Scalar upper_green = new Scalar(120, 100, 100);
 
         // Crear una máscara binaria para el color rojo y otra para el color verde
         Mat red_mask = new Mat();
@@ -162,10 +165,11 @@ public class ColorTracking : MonoBehaviour
             Cv2.DrawContours(frame, contours_red, -1, contour_color_red, contour_thickness);
             Cv2.DrawContours(frame, contours_green, -1, contour_color_green, contour_thickness);
             // Asignar el valor true a la variable booleana
-            Thread.Sleep(1000);
+            
             hayMovimiento = true;
         }
-
+        //Modificando los colores ya no se necesita reducir los frames analziados por segundo
+        //Thread.Sleep(1000/60);
         return frame;
     }
 
