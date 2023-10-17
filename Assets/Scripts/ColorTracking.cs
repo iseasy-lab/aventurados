@@ -17,7 +17,7 @@ public class ColorTracking : MonoBehaviour
     // Variable para almacenar el kernel morfológico
     private Mat kernel;
     // Variable para almacenar el estado del movimiento
-    private bool hayMovimiento = false;
+    //private bool hayMovimiento = false;
     // Variable para almacenar el estado del movimiento de color rojo
     private bool hayMovimientoRojo = false;
     // Variable para almacenar el estado del movimiento de color verde
@@ -25,11 +25,13 @@ public class ColorTracking : MonoBehaviour
     // Variable para almacenar el fotograma anterior
     private Mat prevFrame = null;
     // Variable para almacenar el umbral de diferencia
-    private double threshold = 1;
+    //private double threshold = 5;
+    private double threshold_red = 6; // Variable para almacenar el umbral de diferencia para objetos de color rojo
+    private double threshold_green = 4; // Variable para almacenar el umbral de diferencia para objetos de color verde
     // Variable para almacenar el número de objetos de color rojo
-    private int num_objects_red = 0;
+    //private int num_objects_red = 0;
     // Variable para almacenar el número de objetos de color verde
-    private int num_objects_green = 0;
+    //private int num_objects_green = 0;
 
     void Start()
     {
@@ -75,42 +77,27 @@ public class ColorTracking : MonoBehaviour
             prevFrame = frame.Clone();
             return frame;
         }
-        // Calcular la diferencia entre el fotograma actual y el previo
-        Mat diff = new Mat();
-        Cv2.Absdiff(frame, prevFrame, diff);
-        // Calcular la suma de los valores absolutos de la diferencia
-        Scalar sum = Cv2.Sum(diff);
-        // Calcular la media de los valores absolutos de la diferencia
-        double mean = (sum[0] + sum[1] + sum[2]) / (diff.Rows * diff.Cols * diff.Channels());
-        // Actualizar el fotograma previo con el actual
-        prevFrame = frame.Clone();
-        // Si la media es menor que el umbral, asignar false a la variable booleana y salir del método
-        if (mean < threshold)
-        {
-            hayMovimiento = false;
-            hayMovimientoRojo = false;
-            hayMovimientoVerde = false;
-            num_objects_red = 0;
-            num_objects_green = 0;
-            Debug.Log("No hay objetos");
-            //Modificando los colores ya no se necesita reducir los frames analziados por segundo
-            //Thread.Sleep(1000/60); //duerme el programa por 1s 
-            return null;
-        }
 
         // Convertir el fotograma a HSV
         Mat hsv = new Mat();
         Cv2.CvtColor(frame, hsv, ColorConversionCodes.BGR2HSV);
 
         // Definir el rango de color rojo en HSV
-        //Buscar un color específico para que solo se léa ese color y no los que se parecen
-        Scalar lower_red = new Scalar(0, 100, 98);
+        //Scalar lower_red = new Scalar(0, 120, 70);    //Valor del tono para un rojo amplio
+        //Scalar upper_red = new Scalar(10, 255, 255);
+
+        Scalar lower_red = new Scalar(0, 100, 99); //Valor del tono para un rojo específico
         Scalar upper_red = new Scalar(0, 100, 100);
 
         // Definir el rango de color verde en HSV
-        //Buscar un color específico para que solo se léa ese color y no los que se parecen
-        Scalar lower_green = new Scalar(120, 100, 60);      
-        Scalar upper_green = new Scalar(120, 100, 100);
+        Scalar lower_green = new Scalar(36, 25, 25); //Valor del tono para un verde amplio
+        Scalar upper_green = new Scalar(86, 255, 255);
+
+        //Scalar lower_green = new Scalar(220, 100, 100);  // Valor del tono para azul
+        //Scalar upper_green = new Scalar(240, 100, 100);
+
+        //Scalar lower_green = new Scalar(120, 100, 99); //Valor del tono para un verde específico
+        //Scalar upper_green = new Scalar(120, 100, 100);
 
         // Crear una máscara binaria para el color rojo y otra para el color verde
         Mat red_mask = new Mat();
@@ -132,44 +119,97 @@ public class ColorTracking : MonoBehaviour
         Cv2.FindContours(closed_red, out contours_red, out hierarchy_red, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
         Cv2.FindContours(closed_green, out contours_green, out hierarchy_green, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
 
-        // Contar el número de contornos encontrados y asignarlo a las variables
-        num_objects_red = contours_red.Length;
-        num_objects_green = contours_green.Length;
 
-        // Asignar el valor true a las variables booleanas si hay al menos un contorno de cada color, y false en caso contrario
-        hayMovimientoRojo = num_objects_red > 0;
-        hayMovimientoVerde = num_objects_green > 0;
-
-        // Si hay al menos un contorno de cada color, mostrar un mensaje y dibujar los contornos
-        if (hayMovimientoRojo || hayMovimientoVerde)
+        //Analizar ROI (Region de Interes) de objetos de color verde
+        foreach (var contour in contours_green)
         {
-            // Definir el texto del mensaje
-            string message = $"Se han detectado {num_objects_red} objetos de color rojo y {num_objects_green} objetos de color verde.";
-            // Definir la posición del mensaje
-            Point position = new Point(10, 30);
-            // Definir el color del mensaje
-            Scalar color = Scalar.White;
-            // Definir la fuente del mensaje
-            HersheyFonts font = HersheyFonts.HersheySimplex;
-            // Definir el tamaño del mensaje
-            double size = 1.0;
-            // Escribir el mensaje en el fotograma original
-            Cv2.PutText(frame, message, position, font, size, color);
-            // Definir el color de los contornos rojos
-            Scalar contour_color_red = Scalar.Red;
-            // Definir el color de los contornos verdes
-            Scalar contour_color_green = Scalar.Green;
-            // Definir el grosor de los contornos
-            int contour_thickness = 2;
-            // Dibujar los contornos en el fotograma original
-            Cv2.DrawContours(frame, contours_red, -1, contour_color_red, contour_thickness);
-            Cv2.DrawContours(frame, contours_green, -1, contour_color_green, contour_thickness);
-            // Asignar el valor true a la variable booleana
-            
-            hayMovimiento = true;
+            //Obtener una ROI para cada contorno de cada objeto verde
+            OpenCvSharp.Rect roi_green = Cv2.BoundingRect(contour);
+
+            //Extraer la ROI de la mascara de movimiento
+            Mat roi_Mask_Green = new Mat(closed_green, roi_green);
+
+            //Calcular el valor de la media de movimientod e cada objeto
+            Scalar roiMeanGreen = Cv2.Mean(roi_Mask_Green);
+
+
+            if (roiMeanGreen.Val0 > threshold_green)
+            {
+                // Definir el texto del mensaje
+                string message = $"Se han detectado objetos de color VERDE que se mueven mucho";
+                Debug.Log("El valor del meanGreen: " + roiMeanGreen.Val0);
+                // Definir la posición del mensaje
+                Point position = new Point(10, 30);
+                // Definir el color del mensaje
+                Scalar color = Scalar.White;
+                // Definir la fuente del mensaje
+                HersheyFonts font = HersheyFonts.HersheySimplex;
+                // Definir el tamaño del mensaje
+                double size = 1.0;
+                // Escribir el mensaje en el fotograma original
+                Cv2.PutText(frame, message, position, font, size, color);
+                // Definir el color de los contornos verdes
+                Scalar contour_color_green = Scalar.Green;
+                // Definir el grosor de los contornos
+                int contour_thickness = 2;
+                // Dibujar los contornos en el fotograma original
+                Cv2.DrawContours(frame, contours_green, -1, contour_color_green, contour_thickness);
+
+                hayMovimientoVerde = true;
+                
+            }
+            else
+            {
+                hayMovimientoVerde = false;
+            }
         }
-        //Modificando los colores ya no se necesita reducir los frames analziados por segundo
-        //Thread.Sleep(1000/60);
+
+        //Analizar ROI (Region de Interes) de objetos de color rojo
+        foreach (var contour in contours_red)
+        {
+            //Obtener una ROI para cada contorno de cada objeto rojo
+            OpenCvSharp.Rect roi_red = Cv2.BoundingRect(contour);
+
+            //Extraer la ROI de la mascara de movimiento
+            Mat roi_Mask_Red = new Mat(closed_red, roi_red);
+
+            //Calcular el valor de la media de movimientod e cada objeto
+            Scalar roiMeanRed = Cv2.Mean(roi_Mask_Red);
+
+            if (roiMeanRed.Val0 > threshold_red)
+            {
+                // Definir el texto del mensaje
+                string message = $"Se han detectado objetos de color ROJO que se mueven mucho";
+                Debug.Log("El valor del meanRed: " + roiMeanRed.Val0);
+                // Definir la posición del mensaje
+                Point position = new Point(10, 30);
+                // Definir el color del mensaje
+                Scalar color = Scalar.White;
+                // Definir la fuente del mensaje
+                HersheyFonts font = HersheyFonts.HersheySimplex;
+                // Definir el tamaño del mensaje
+                double size = 1.0;
+                // Escribir el mensaje en el fotograma original
+                Cv2.PutText(frame, message, position, font, size, color);
+                // Definir el color de los contornos rojos
+                Scalar contour_color_red = Scalar.Red;
+                // Definir el grosor de los contornos
+                int contour_thickness = 2;
+                // Dibujar los contornos en el fotograma original
+                Cv2.DrawContours(frame, contours_red, -1, contour_color_red, contour_thickness);
+
+                hayMovimientoRojo = true;
+                
+                //return frame;
+            }
+            else
+            {
+                hayMovimientoRojo = false;
+            }
+        }
+
+
+        Thread.Sleep(1000 / 60);
         return frame;
     }
 
