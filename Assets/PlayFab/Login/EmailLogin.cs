@@ -1,10 +1,9 @@
 ﻿using System;
-using PlayFab;
+using FMGames.Playfab.Login;
 using PlayFab.ClientModels;
-using PlayfabTutorial.Scripts.PlayFab;
 using UnityEngine;
 
-namespace FMGames.Playfab.Login {
+namespace PlayFab.Login {
     public class EmailLogin : ILogin {
         public class EmailLoginParams {
             public string username;

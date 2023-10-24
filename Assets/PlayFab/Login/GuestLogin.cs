@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Globalization;
 using System.Text;
-using PlayFab;
+using FMGames.Playfab.Login;
 using PlayFab.ClientModels;
 using UnityEngine;
 
-namespace FMGames.Playfab.Login {
+namespace PlayFab.Login {
     public class GuestLogin : ILogin {
         public class GuestLoginParameters {
             public string guestId;

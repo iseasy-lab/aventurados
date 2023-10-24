@@ -1,6 +1,6 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
-using PlayfabTutorial.Scripts.PlayFab;
+using PlayFab.Login;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
