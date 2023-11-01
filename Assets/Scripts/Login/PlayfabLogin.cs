@@ -2,8 +2,6 @@
 using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
-using System.Collections.Generic;
 
 namespace Login {
     /// <summary>
@@ -11,14 +9,10 @@ namespace Login {
     /// </summary>
     public class PlayfabLogin : MonoBehaviour {
         
-        public string returnedPlayFabId;
-        public string displayName = null;
         [SerializeField] private LoginUi loginUi;
         [SerializeField] private RegisterUi registerUi;
         [SerializeField] private GameObject loginInProgress;
         
-        //public event Action<string> OnSuccess;
-
         public void Start() {
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = 30;
@@ -32,8 +26,7 @@ namespace Login {
         }
 
         public void Login(ILogin loginMethod, object loginParams) {
-            loginMethod.Login(_loginInfoParams, OnLoginSuccess, OnLoginFailure, loginParams);
-
+            loginMethod.Login(loginInfoParams, OnLoginSuccess, OnLoginFailure, loginParams);
             loginInProgress.SetActive(true);
         }
 
@@ -75,7 +68,7 @@ namespace Login {
                 Email = registerUi.email.text,
                 Password = registerUi.password.text,
                 Username = registerUi.username.text,
-                InfoRequestParameters = _loginInfoParams,
+                InfoRequestParameters = loginInfoParams,
             };
 
             PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnLoginFailure);
@@ -130,33 +123,20 @@ namespace Login {
 
         private void OnLoginSuccess(LoginResult result) {
             Debug.Log("Login Success!");
-            //OnSuccess?.Invoke(result.PlayFabId);
-            Debug.Log("identificador playfab: "+result.PlayFabId);
+            Debug.Log("identificador playfab: " + result.PlayFabId);
             
             GetPlayerProfile(result.PlayFabId);
-            Debug.Log("nombre usuario playfab: "+result.InfoResultPayload.PlayerProfile.DisplayName);
-            returnedPlayFabId = result.PlayFabId;
+            Debug.Log("nombre usuario playfab: " + result.InfoResultPayload.PlayerProfile.DisplayName);
 
             PlayerPrefs.SetString(PlayFabConstants.SavedUsername, loginUi.username.text);
 
             loginInProgress.SetActive(false);
 
             SceneManager.LoadScene(1);
-            //Presentar Nombre de Usuario
 
-            string name = null;
-            if (result.InfoResultPayload.PlayerProfile != null)
-                name = result.InfoResultPayload.PlayerProfile.DisplayName;
         }
 
-        public string ReturnPlayFabId(string playFabId)
-        {
-            Debug.Log("id returned= "+returnedPlayFabId);
-            playFabId = returnedPlayFabId;
-            return playFabId;
-        }
-
-        private GetPlayerCombinedInfoRequestParams _loginInfoParams =
+        private readonly GetPlayerCombinedInfoRequestParams loginInfoParams =
             new GetPlayerCombinedInfoRequestParams {
                 GetUserAccountInfo = true,
                 GetUserData = true,
@@ -165,8 +145,6 @@ namespace Login {
                 GetUserReadOnlyData = true,
                 GetPlayerProfile = true,
                 GetPlayerStatistics = true,
-                
-                
             };
 
         private void OnLoginFailure(PlayFabError error) {
@@ -176,42 +154,6 @@ namespace Login {
             Debug.LogError(error.GenerateErrorReport());
         }
         
-        void OnSuccess(LoginResult result)
-        {
-            Debug.Log("Login Success!");
-        }
-        
-        void OnError(PlayFabError error)
-        {
-            Debug.Log("Error while logging");
-        }
-
-        public void SendLeaderboard(int score)
-        {
-            var request = new UpdatePlayerStatisticsRequest
-            {
-                Statistics = new List<StatisticUpdate>
-                {
-                    new StatisticUpdate
-                    {
-                        StatisticName = "Leaderboard",
-                        Value = score
-                    }
-                }
-            };
-            PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
-        }
-        
-        void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
-        {
-            Debug.Log("Leaderboard updated");
-        }
-
-        public void Exit() {
-            Application.Quit();
-        }
-        
-        
         public void GetPlayerProfile(string playFabId)
         {
             var request = new GetAccountInfoRequest()
@@ -220,16 +162,12 @@ namespace Login {
             };
             PlayFabClientAPI.GetAccountInfo(request, OnDisplaySuccess, OnDisplayError);
             
-            
-            //result => Debug.Log("The player's DisplayName profile data is: " + result.PlayerProfile.DisplayName),
-            //error => Debug.LogError(error.GenerateErrorReport()));
         }
         
         private void OnDisplaySuccess(GetAccountInfoResult result)
         {
-            displayName = result.AccountInfo.Username;
-            Debug.Log("The player's DisplayName profile data is: " + result.AccountInfo.Username);
-            //displayName = result.PlayerProfile.DisplayName;
+            Debug.Log("The player's Username profile is: " + result.AccountInfo.Username);
+            
             PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
                 {
                     DisplayName = result.AccountInfo.Username,

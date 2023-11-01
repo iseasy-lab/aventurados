@@ -1,28 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using Leaderboard;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using PlayFab;
-using PlayFab.ClientModels;
 
 public class GameManager : MonoBehaviour
 {
     private int puntosTotales;
     private const string LeaderboardName = "Leaderboard";
-    private PlayFabUpdatePlayerStatistics _playFabUpdatePlayerStatistics;
-    private string _playerId;
+    private PlayFabUpdatePlayerStatistics playFabUpdatePlayerStatistics;
+    private string playerId;
     
     public static GameManager Instance { get; private set; }
-    //public PlayfabLogin playfabLogin;
     public HUD hud;
 
     public int PuntosTotales { get { return puntosTotales; } }
 
     private void Awake()
     {
-        
         if (Instance == null)
         {
             Instance = this;
@@ -42,18 +37,18 @@ public class GameManager : MonoBehaviour
     {
         var request = new GetUserDataRequest
         {
-            PlayFabId = _playerId
+            PlayFabId = playerId
         };
         PlayFabClientAPI.GetUserData(request, OnGetUserDataSuccess, OnGetUserDataFailure);
         Debug.Log("Request: " + request);
         
-        _playFabUpdatePlayerStatistics = new PlayFabUpdatePlayerStatistics();
+        playFabUpdatePlayerStatistics = new PlayFabUpdatePlayerStatistics();
     }
     
     private void OnGetUserDataSuccess(GetUserDataResult result)
     {
             
-        Debug.Log("Id: " + _playerId);
+        Debug.Log("Id: " + playerId);
             
     }
 
@@ -62,9 +57,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Error al obtener datos del jugador");
     }
 
-    public void SumarPuntos(int PuntosSumar)
+    public void SumarPuntos(int puntosSumar)
     {
-        puntosTotales += PuntosSumar;
+        puntosTotales += puntosSumar;
         Debug.Log(puntosTotales);
         hud.ActualizarPuntos(puntosTotales);
     }
@@ -88,11 +83,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Debug.Log("Puntos enviados: " + puntosTotales);
-        //playfabLogin.SendLeaderboard(puntosTotales);
-        _playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
-        //PlayFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
-        
+        playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
     }
-
-
+    
 }
