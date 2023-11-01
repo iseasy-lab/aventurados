@@ -45,6 +45,23 @@ public class ColorTracking : MonoBehaviour
                 Debug.Log("se movio el rojo: ");
             break;
         }
+        
+        if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.Q))
+        {
+            
+            // Liberar los recursos
+            webcamTexture.Stop();
+            backgroundSubtractor.Dispose();
+            kernel.Dispose();
+            prevFrame.Dispose();
+            Cv2.DestroyAllWindows();
+            //frame.Destroy();
+            // Se cierra el juego
+            Application.Quit();
+            
+        }
+        
+        
     }
 
     async Task<Mat> GetFrameAsync()
