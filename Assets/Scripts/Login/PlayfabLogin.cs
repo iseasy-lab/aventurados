@@ -12,6 +12,7 @@ namespace Login {
     public class PlayfabLogin : MonoBehaviour {
         
         public string returnedPlayFabId;
+        public string displayName = null;
         [SerializeField] private LoginUi loginUi;
         [SerializeField] private RegisterUi registerUi;
         [SerializeField] private GameObject loginInProgress;
@@ -130,7 +131,10 @@ namespace Login {
         private void OnLoginSuccess(LoginResult result) {
             Debug.Log("Login Success!");
             //OnSuccess?.Invoke(result.PlayFabId);
-            Debug.Log(result.PlayFabId);
+            Debug.Log("identificador playfab: "+result.PlayFabId);
+            
+            GetPlayerProfile(result.PlayFabId);
+            Debug.Log("nombre usuario playfab: "+result.InfoResultPayload.PlayerProfile.DisplayName);
             returnedPlayFabId = result.PlayFabId;
 
             PlayerPrefs.SetString(PlayFabConstants.SavedUsername, loginUi.username.text);
@@ -152,7 +156,7 @@ namespace Login {
             return playFabId;
         }
 
-        private readonly GetPlayerCombinedInfoRequestParams _loginInfoParams =
+        private GetPlayerCombinedInfoRequestParams _loginInfoParams =
             new GetPlayerCombinedInfoRequestParams {
                 GetUserAccountInfo = true,
                 GetUserData = true,
@@ -161,6 +165,7 @@ namespace Login {
                 GetUserReadOnlyData = true,
                 GetPlayerProfile = true,
                 GetPlayerStatistics = true,
+                
                 
             };
 
@@ -204,6 +209,38 @@ namespace Login {
 
         public void Exit() {
             Application.Quit();
+        }
+        
+        
+        public void GetPlayerProfile(string playFabId)
+        {
+            var request = new GetAccountInfoRequest()
+            {
+                PlayFabId = playFabId,
+            };
+            PlayFabClientAPI.GetAccountInfo(request, OnDisplaySuccess, OnDisplayError);
+            
+            
+            //result => Debug.Log("The player's DisplayName profile data is: " + result.PlayerProfile.DisplayName),
+            //error => Debug.LogError(error.GenerateErrorReport()));
+        }
+        
+        private void OnDisplaySuccess(GetAccountInfoResult result)
+        {
+            displayName = result.AccountInfo.Username;
+            Debug.Log("The player's DisplayName profile data is: " + result.AccountInfo.Username);
+            //displayName = result.PlayerProfile.DisplayName;
+            PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
+                {
+                    DisplayName = result.AccountInfo.Username,
+                }, 
+                result => Debug.Log("The player's display name is now: " + result.DisplayName),
+                error => Debug.LogError(error.GenerateErrorReport()));
+        }
+        
+        private void OnDisplayError(PlayFabError error)
+        {
+            Debug.LogError(error.GenerateErrorReport());
         }
     }
 }

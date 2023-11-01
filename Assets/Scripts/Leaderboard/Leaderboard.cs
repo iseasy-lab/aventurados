@@ -34,6 +34,9 @@ namespace Leaderboard
             AddListeners();
             CreatePlayFabServices();
             
+            if (PlayFabClientAPI.IsClientLoggedIn()) {
+                Debug.Log("Usuario logeado");
+            }
             //PlayFabClientAPI.GetUserData(request);
         }
         
@@ -42,7 +45,7 @@ namespace Leaderboard
         {
             var request = new GetUserDataRequest
             {
-                PlayFabId = _playerId
+                PlayFabId = _playerId,
             };
             PlayFabClientAPI.GetUserData(request, OnGetUserDataSuccess, OnGetUserDataFailure);
             Debug.Log("Request: " + request);
@@ -71,19 +74,19 @@ namespace Leaderboard
             Debug.Log("Generando leaderboard");
             _playFabGetLeaderboard.GetLeaderboardEntries(0, 10, LeaderboardName);
         }
-        
-        private void OnRegresarButtonPressed()
-        {
-            Debug.Log("Regresando al menu principal");
-            SceneManager.LoadScene(1);
-        }
-
         private void OnGetPlayerScoreButtonPressed()
         {
             Debug.Log("Generando score del jugador: " + _playerId);
             //_playFabGetLeaderboardAroundPlayer.UpdateDisplayName(_playerId);
             _playFabGetLeaderboardAroundPlayer.GetLeaderboardAroundPlayer(_playerId, 1, LeaderboardName);
         }
+        private void OnRegresarButtonPressed()
+        {
+            Debug.Log("Regresando al menu principal");
+            SceneManager.LoadScene(1);
+        }
+
+        
 
         //private void OnGetLeaderboardAroundPlayerButtonPressed()
         //{

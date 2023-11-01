@@ -65,7 +65,7 @@ namespace Leaderboard
                 GetPlayerProfile(playerLeaderboardEntry.PlayFabId);
                 //displayName = UpdateDisplayName(playerLeaderboardEntry.PlayFabId).result.PlayerProfile.DisplayName;
                 Debug.Log("dn " + displayName);
-                leaderboard.AppendLine($"{playerLeaderboardEntry.Position}.- {playerLeaderboardEntry.PlayFabId} -- {displayName} --{playerLeaderboardEntry.StatValue}");
+                leaderboard.AppendLine($"{playerLeaderboardEntry.Position}.- {playerLeaderboardEntry.PlayFabId} -- {playerLeaderboardEntry.DisplayName} --{playerLeaderboardEntry.StatValue}");
             }
 
             OnSuccess?.Invoke(leaderboard.ToString());
