@@ -14,7 +14,10 @@ public class NewBehaviourScript : MonoBehaviour
     Rigidbody rb;
     public float Velocidad = 4f;
 
+    //Variables Globales
     private float currentTime = Options.GlobalVar.currentTime;
+    private double speedThreshold = Options.GlobalVar.speedThreshold; // Variable para almacenar el umbral de diferencia para objetos de color rojo
+
     
     // Variable para almacenar el video
     private WebCamTexture webcamTexture;
@@ -55,8 +58,7 @@ public class NewBehaviourScript : MonoBehaviour
     //Variable para almacenar el centro del rectángulo en el fotograma anterior
     Point prevCenterRed;
     
-    private double speedThreshold = Options.GlobalVar.speedThreshold; // Variable para almacenar el umbral de diferencia para objetos de color rojo
-    
+   
     // Start is called before the first frame update
     void Start()
     {
