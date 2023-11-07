@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Leaderboard.unity
     guid: a689314c072f0c54e9c116c96439d691
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: dea9e5746fb9efe4894ccce643019ba6
   - enabled: 0
     path: Assets/Scenes/EscenaSelectorNivel.unity
     guid: 91139481a3c214948abfc67e707860a9

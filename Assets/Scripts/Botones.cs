@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BotonJugar : MonoBehaviour
+public class Botones : MonoBehaviour
 {
     public void PulsarJugar()
     {
@@ -18,6 +18,18 @@ public class BotonJugar : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
+    public void PulsarOpciones()
+    {
+        Debug.Log("Ir a Opciones");
+        SceneManager.LoadScene(5);
+    }
+    
+    public void PulsarRegresar()
+    {
+        Debug.Log("Ir al menu");
+        SceneManager.LoadScene(1);
+    }
+    
     public void PulsarSalir()
     {
         Debug.Log("Salir");

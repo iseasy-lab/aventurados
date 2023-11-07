@@ -278,8 +278,9 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Enum\DistanceTransformLabelTypes.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct\Vecf.cs" />
-     <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\features2d\AgastFeatureDetector.cs" />
+     <Compile Include="Assets\Scripts\Options\GlobalVar.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\xfeatures2d\StarDetector.cs" />
+     <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\features2d\AgastFeatureDetector.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Cv2\Cv2_highgui.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum\AlgorithmParamType.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\face\NativeMethods_face_FaceRecognizer.cs" />
@@ -554,6 +555,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Marker_Detector\Resources" />
+     <Folder Include="Assets\Scripts\Options" />
      <None Include="Assets\mcs.rsp" />
      <Folder Include="Assets\Scripts\Util" />
      <None Include="Assets\OpenCV+Unity\smcs.rsp" />
@@ -626,7 +628,6 @@
      <Folder Include="Assets\OpenCV+Unity\Demo\Lobby" />
      <None Include="Assets\OpenCV+Unity\Demo\Face_Recognizer\face-recognizer.xml" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d\Enum" />
-     <Folder Include="Assets\Prefabs 1" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly" />

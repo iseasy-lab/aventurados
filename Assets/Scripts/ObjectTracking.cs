@@ -9,7 +9,7 @@ public class ObjectTracking : MonoBehaviour
     // Variable para almacenar el rango de color rojo
     private Scalar lowerRed;
     private Scalar upperRed;
-    // Variable para almacenar el kernel morfol骻ico
+    // Variable para almacenar el kernel morfol贸gico
     private Mat kernel;
 
     void Start()
@@ -20,7 +20,7 @@ public class ObjectTracking : MonoBehaviour
         // Inicializar el rango de color rojo
         lowerRed = new Scalar(0, 100, 100);
         upperRed = new Scalar(10, 255, 255);
-        // Inicializar el kernel morfol骻ico
+        // Inicializar el kernel morfol贸gico
         kernel = Cv2.GetStructuringElement(MorphShapes.Rect, new Size(3, 3));
     }
 
@@ -34,14 +34,14 @@ public class ObjectTracking : MonoBehaviour
         // Aplicar el filtro de color
         Mat mask = new Mat();
         Cv2.InRange(gray, lowerRed, upperRed, mask);
-        // Aplicar la operaci髇 morfol骻ica de cierre
+        // Aplicar la operaci贸n morfol贸gica de cierre
         Mat closed = new Mat();
         Cv2.MorphologyEx(mask, closed, MorphTypes.Close, kernel);
         // Encontrar los contornos de los objetos en movimiento
         Point[][] contours;
         HierarchyIndex[] hierarchy;
         Cv2.FindContours(closed, out contours, out hierarchy, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
-        // Dibujar un rect醤gulo alrededor de cada contorno
+        // Dibujar un rect谩ngulo alrededor de cada contorno
         foreach (Point[] contour in contours)
         {
             OpenCvSharp.Rect rect = Cv2.BoundingRect(contour);

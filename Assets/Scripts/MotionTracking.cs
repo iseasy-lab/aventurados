@@ -12,7 +12,7 @@ public class MotionTracking : MonoBehaviour
     private WebCamTexture webcamTexture;
     // Variable para almacenar el fondo
     private BackgroundSubtractorMOG2 backgroundSubtractor;
-    // Variable para almacenar el kernel morfol骻ico
+    // Variable para almacenar el kernel morfol贸gico
     private Mat kernel;
 
     void Start()
@@ -22,7 +22,7 @@ public class MotionTracking : MonoBehaviour
         webcamTexture.Play();
         // Inicializar el fondo
         backgroundSubtractor = BackgroundSubtractorMOG2.Create();
-        // Inicializar el kernel morfol骻ico
+        // Inicializar el kernel morfol贸gico
         kernel = Cv2.GetStructuringElement(MorphShapes.Rect, new Size(3, 3));
     }
 
@@ -33,17 +33,17 @@ public class MotionTracking : MonoBehaviour
         // Convertir el fotograma a escala de grises
         Mat gray = new Mat();
         Cv2.CvtColor(frame, gray, ColorConversionCodes.BGR2GRAY);
-        // Aplicar la sustracci髇 de fondo
+        // Aplicar la sustracci贸n de fondo
         Mat fgMask = new Mat();
         backgroundSubtractor.Apply(gray, fgMask);
-        // Aplicar la operaci髇 morfol骻ica de cierre
+        // Aplicar la operaci贸n morfol贸gica de cierre
         Mat closed = new Mat();
         Cv2.MorphologyEx(fgMask, closed, MorphTypes.Close, kernel);
         // Encontrar los contornos de los objetos en movimiento
         Point[][] contours;
         HierarchyIndex[] hierarchy;
         Cv2.FindContours(closed, out contours, out hierarchy, RetrievalModes.External, ContourApproximationModes.ApproxSimple);
-        // Dibujar un rect醤gulo alrededor de cada contorno
+        // Dibujar un rect谩ngulo alrededor de cada contorno
         foreach (Point[] contour in contours)
         {
             OpenCvSharp.Rect rect = Cv2.BoundingRect(contour);
