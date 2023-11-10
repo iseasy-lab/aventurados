@@ -80,7 +80,7 @@ public class NewBehaviourScript : MonoBehaviour
         
         // Resta el tiempo transcurrido desde el último frame
         currentTime -= Time.deltaTime;
-
+        //GameManager.SumarPuntos(1);
         // Si se cumple el tiempo deseado, llama al método GameOver
         if (currentTime <= 0f)
         {
@@ -89,7 +89,6 @@ public class NewBehaviourScript : MonoBehaviour
         
         if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.Q))
         {
-            
             // Liberar los recursos
             webcamTexture.Stop();
             backgroundSubtractor.Dispose();
@@ -99,7 +98,6 @@ public class NewBehaviourScript : MonoBehaviour
             //frame.Destroy();
             // Se cierra el juego
             Application.Quit();
-            
         }
         
         // Obtener el fotograma actual de forma asíncrona
@@ -235,6 +233,7 @@ public class NewBehaviourScript : MonoBehaviour
         return redMask;
     }
 
+    
     IEnumerator Esperar(int segundos)
     {
         yield return new WaitForSeconds(segundos);

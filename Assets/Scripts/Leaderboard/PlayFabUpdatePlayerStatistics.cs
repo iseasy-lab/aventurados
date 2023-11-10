@@ -21,9 +21,7 @@ namespace Leaderboard
                                                }
                                            },
                           };
-            PlayFabClientAPI.UpdatePlayerStatistics(request,
-                                                    OnUpdatePlayerStatisticsSuccess,
-                                                    OnUpdatePlayerStatisticsFailure);
+            PlayFabClientAPI.UpdatePlayerStatistics(request, OnUpdatePlayerStatisticsSuccess, OnUpdatePlayerStatisticsFailure);
 
         }
 

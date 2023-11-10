@@ -31,7 +31,7 @@ namespace Leaderboard
             var leaderboard = new StringBuilder();
             foreach (var playerLeaderboardEntry in response.Leaderboard)
             {
-                leaderboard.AppendLine($"{playerLeaderboardEntry.Position + 1}.--- {playerLeaderboardEntry.DisplayName} --- {playerLeaderboardEntry.StatValue}");
+                leaderboard.AppendLine($"{playerLeaderboardEntry.Position + 1}.                         {playerLeaderboardEntry.DisplayName}                               {playerLeaderboardEntry.StatValue}");
             }
 
             OnSuccess?.Invoke(leaderboard.ToString());
