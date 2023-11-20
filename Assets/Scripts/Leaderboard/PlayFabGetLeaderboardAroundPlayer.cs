@@ -23,7 +23,7 @@ namespace Leaderboard
         
         private void GetLeaderboardAroundPlayerFailure(PlayFabError error)
         {
-            Debug.LogError($"Here's some debug information: {error.GenerateErrorReport()}");
+            Debug.Log($"Here's some debug information: {error.GenerateErrorReport()}");
         }
 
         private void OnGetLeaderboardAroundPlayerSuccess(GetLeaderboardAroundPlayerResult response)

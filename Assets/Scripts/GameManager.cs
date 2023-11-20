@@ -47,9 +47,7 @@ public class GameManager : MonoBehaviour
     
     private void OnGetUserDataSuccess(GetUserDataResult result)
     {
-            
         Debug.Log("Id: " + playerId);
-            
     }
 
     private void OnGetUserDataFailure(PlayFabError error)

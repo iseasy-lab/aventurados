@@ -43,13 +43,13 @@ namespace Login {
             string errorMessage = "";
 
             if (loginUi.username.text.Length < 5) {
-                errorMessage = "Username must be at least 5 characters";
+                errorMessage = "Nombre de usuario debe tener almenos 5 caracteres";
             } else if (loginUi.password.text.Length < 8) {
-                errorMessage = "Password must be at least 8 characters";
+                errorMessage = "Contrasena debe tener almenos 8 caracteres";
             }
 
             if (errorMessage.Length > 0) {
-                Debug.LogError(errorMessage);
+                Debug.Log(errorMessage);
                 return false;
             }
 
@@ -93,7 +93,7 @@ namespace Login {
             }
 
             if (errorMessage.Length > 0) {
-                Debug.LogError(errorMessage);
+                Debug.Log(errorMessage);
                 return false;
             }
 
@@ -148,10 +148,10 @@ namespace Login {
             };
 
         private void OnLoginFailure(PlayFabError error) {
-            Debug.LogError("Login failure: " + error.Error + "  " + error.ErrorDetails + error + "  " +
+            Debug.Log("Login failure: " + error.Error + "  " + error.ErrorDetails + error + "  " +
                            error.ApiEndpoint + "  " + error.ErrorMessage);
             loginInProgress.SetActive(false);
-            Debug.LogError(error.GenerateErrorReport());
+            Debug.Log(error.GenerateErrorReport());
         }
         
         public void GetPlayerProfile(string playFabId)
@@ -167,18 +167,31 @@ namespace Login {
         private void OnDisplaySuccess(GetAccountInfoResult result)
         {
             Debug.Log("The player's Username profile is: " + result.AccountInfo.Username);
+            if (result.AccountInfo.Username != null)
+            {
+                PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
+                    {
+                        DisplayName = result.AccountInfo.Username,
+                    }, 
+                    result => Debug.Log("The player's display name is now: " + result.DisplayName),
+                    error => Debug.Log(error.GenerateErrorReport()));
+            }
+            else
+            {
+                PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
+                    {
+                        //DisplayName = "Jugador " + Random.Range(0, 1000).ToString(),
+                        DisplayName = "Jugador Invitado",
+                    }, 
+                    result => Debug.Log("The player's display name is now: " + result.DisplayName),
+                    error => Debug.Log(error.GenerateErrorReport()));
+            }
             
-            PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
-                {
-                    DisplayName = result.AccountInfo.Username,
-                }, 
-                result => Debug.Log("The player's display name is now: " + result.DisplayName),
-                error => Debug.LogError(error.GenerateErrorReport()));
         }
         
         private void OnDisplayError(PlayFabError error)
         {
-            Debug.LogError(error.GenerateErrorReport());
+            Debug.Log(error.GenerateErrorReport());
         }
     }
 }

@@ -89,6 +89,7 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Cv2\Cv2_calib3d.cs" />
      <Compile Include="Assets\Scripts\Util\Rotator.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Model\HierarchyIndex.cs" />
+     <Compile Include="Assets\Scripts\Colision.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\LineSegmentDetector.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -510,6 +511,7 @@
      <Folder Include="Assets" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Tracking" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\ml" />
+     <Folder Include="Assets\Imagenes\backgrounds" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\video" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Delegate" />
@@ -550,8 +552,11 @@
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\PSD" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\icons" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\symbols" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\aruco\Enum" />
      <Folder Include="Assets\PlayFab\Login" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\titles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Marker_Detector\Resources" />
@@ -564,6 +569,7 @@
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\3D" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\face" />
      <None Include="Assets\OpenCV+Unity\gmcs.rsp" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\sourcefiles" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Cv2" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -598,6 +604,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Models" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Face_Recognizer" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\ready_buttons" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\shape" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\xfeatures2d" />
@@ -609,6 +616,8 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Document_Scanner\Resources\DocumentScanner" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\panels" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\objdetect\Enum" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\ml" />
      <Folder Include="Assets\Modelos\Planets\scene" />
@@ -629,6 +638,7 @@
      <None Include="Assets\OpenCV+Unity\Demo\Face_Recognizer\face-recognizer.xml" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d\Enum" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\buttons" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Prefabs" />
@@ -648,6 +658,7 @@
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\DLib" />
      <Folder Include="Assets\OpenCV+Unity\Assets" />
      <Folder Include="Assets\Modelos\Planets\models\Materials" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\texts" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Grayscale" />
      <Folder Include="Assets\Modelos\Planets" />
@@ -668,6 +679,7 @@
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\tracking" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\Prehabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\panel_elements" />
      <Folder Include="Assets\OpenCV+Unity" />
      <Folder Include="Assets\Scripts" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -675,9 +687,11 @@
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Animator" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\imgproc" />
+     <Folder Include="Assets\Imagenes\character" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras" />
      <Folder Include="Assets\OpenCV+Unity\Demo" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\demo_Scenes" />
      <None Include="Assets\OpenCV+Unity\mcs.rsp" />
      <Folder Include="Assets\Modelos\Planets\models" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Fonts &amp; Materials" />

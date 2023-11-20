@@ -10,10 +10,11 @@ namespace Options
 public class GlobalVar : MonoBehaviour
 {
     //public static float currentTime = 10f;
+    //Umbral de velocidad de movimiento
     public static double speedThreshold = 90;
 
     public Slider sliderTime;
-    public static float currentTime;
+    public static float currentTime = 60f;
     
     public void Start()
     {

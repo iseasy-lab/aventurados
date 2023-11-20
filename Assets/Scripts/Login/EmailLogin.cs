@@ -19,7 +19,7 @@ namespace Login {
             EmailLoginParams emailLoginParams = loginParams as EmailLoginParams;
             if (emailLoginParams == null) {
                 loginFailure.Invoke(new PlayFabError());
-                Debug.LogError("Login Parameter is null");
+                Debug.Log("Credenciales de login vacias");
 
                 return;
             }
@@ -29,12 +29,6 @@ namespace Login {
                 Username = emailLoginParams.username,
                 Password = emailLoginParams.password,
                 InfoRequestParameters = loginInfoParams
-                /*
-                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
-                {
-                    GetPlayerProfile = true
-                }
-                */
             };
 
             PlayFabClientAPI.LoginWithPlayFab(request, loginSuccess, loginFailure);

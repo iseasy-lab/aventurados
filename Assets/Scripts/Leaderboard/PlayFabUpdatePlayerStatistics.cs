@@ -27,7 +27,7 @@ namespace Leaderboard
 
         private void OnUpdatePlayerStatisticsFailure(PlayFabError error)
         {
-            Debug.LogError($"Here's some debug information: {error.GenerateErrorReport()}");
+            Debug.Log($"Here's some debug information: {error.GenerateErrorReport()}");
         }
 
         private void OnUpdatePlayerStatisticsSuccess(UpdatePlayerStatisticsResult result)

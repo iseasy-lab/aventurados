@@ -22,7 +22,7 @@ namespace Login {
             GuestLoginParameters guestLoginParams = loginParams as GuestLoginParameters;
             if (guestLoginParams == null) {
                 loginFailure.Invoke(new PlayFabError());
-                Debug.LogError("Login Parameter is null");
+                Debug.Log("Parametros de login vacios");
 
                 return;
             }
@@ -45,12 +45,7 @@ namespace Login {
                 CustomId = guestCustomID,
                 CreateAccount = true,
                 InfoRequestParameters = loginInfoParams
-                /*
-                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
-                {
-                    GetPlayerProfile = true
-                }
-                */
+                
             };
 
             PlayFabClientAPI.LoginWithCustomID(request, loginSuccess, loginFailure);

@@ -113,7 +113,7 @@ public class NewBehaviourScript : MonoBehaviour
                     //Time.timeScale = 1f;
                     velocidad = 5f;
                     transform.position += new Vector3(0, 0, velocidad * Time.deltaTime);
-                    GameManager.SumarPuntos(1);
+                    //GameManager.SumarPuntos(1);
                     Debug.Log("Se ha detectado un objeto de color rojo que se mueve: " + hayMovimientoRapidoRojo);
                     StartCoroutine(Esperar(2));
                     

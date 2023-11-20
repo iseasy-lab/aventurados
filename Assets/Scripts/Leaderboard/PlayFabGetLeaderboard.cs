@@ -23,7 +23,7 @@ namespace Leaderboard
 
         private void OnGetLeaderboardFailure(PlayFabError error)
         {
-            Debug.LogError($"Here's some debug information: {error.GenerateErrorReport()}");
+            Debug.Log($"Here's some debug information: {error.GenerateErrorReport()}");
         }
 
         private void OnGetLeaderboardSuccess(GetLeaderboardResult response)
