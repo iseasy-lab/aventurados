@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 public class NewBehaviourScript : MonoBehaviour
 {
     Rigidbody rb;
-    public float Velocidad = 4f;
+    public float Velocidad = 8f;
 
     //Variables Globales
-    private float currentTime = Options.GlobalVar.currentTime;
+    
     private double speedThreshold = Options.GlobalVar.speedThreshold; // Variable para almacenar el umbral de diferencia para objetos de color rojo
 
     
@@ -52,7 +52,7 @@ public class NewBehaviourScript : MonoBehaviour
     //Variable para almacenar el estado del movimiento rápido
     private bool hayMovimientoRapidoRojo = false;
 
-    public GameManager GameManager;
+   
     public float velocidad;
     
     //Variable para almacenar el centro del rectángulo en el fotograma anterior
@@ -77,15 +77,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     async void Update()
     {
-        
-        // Resta el tiempo transcurrido desde el último frame
-        currentTime -= Time.deltaTime;
-        //GameManager.SumarPuntos(1);
-        // Si se cumple el tiempo deseado, llama al método GameOver
-        if (currentTime <= 0f)
-        {
-            GameManager.GameOver();
-        }
         
         if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.Q))
         {
@@ -249,4 +240,5 @@ public class NewBehaviourScript : MonoBehaviour
         //prevFrame.Dispose();
         Cv2.DestroyAllWindows();
     }
+    
 }

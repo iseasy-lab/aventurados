@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Leaderboard;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
     private const string LeaderboardName = "Leaderboard";
     private PlayFabUpdatePlayerStatistics playFabUpdatePlayerStatistics;
     private string playerId;
+    
+    //Personajes
+    public List<Characters> charactersList;
     
     public static GameManager Instance { get; private set; }
     public HUD hud;

@@ -10,14 +10,15 @@ public class Colision : MonoBehaviour
     public GameManager GameManager;
     public GameObject Player;
     public Vector3 posicionInicial = new Vector3(0, 1.25f, -3);
+    private string tag = "Player";
     
+
     public void OnCollisionEnter(Collision collision)
     {
-            Debug.Log("La nave colision");
+            Player = GameObject.FindGameObjectWithTag(tag);
+            Debug.Log("colision y asignacion del punto");
             GameManager.SumarPuntos(1);
             Player.transform.position = posicionInicial;
-            
-        
     }
     
     

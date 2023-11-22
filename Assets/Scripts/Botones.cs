@@ -9,7 +9,7 @@ public class Botones : MonoBehaviour
     {
         Debug.Log("Ir a jugar");
         //Revisar la redirección del botón jugar
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
     
     public void PulsarLeaderboard()
