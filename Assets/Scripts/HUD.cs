@@ -1,32 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
+using PlayFab;
+using PlayFab.ClientModels;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
     public GameManager gameManager;
+    //Pantalla de carga previa al nivel del juego
+    [SerializeField] private GameObject loadInProgress;
     
-    private float currentTime = Options.GlobalVar.currentTime;
+    //Progressbar del tiempo
+    [SerializeField] private Slider progressBar;
+    private int currentScene;
+    
+    private float currentTime = -1;
 
     public TextMeshProUGUI Puntos;
+    
+    //Impresion del nombre de usuario
+    [SerializeField] private TextMeshProUGUI displayNamePlayer;
     
     //Seleccion de personajes
     private int index;
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI name;
     
+    
     //Seleccion de escenas
     private int indexScene;
     [SerializeField] private Image imageScene;
     [SerializeField] private TextMeshProUGUI nameScene;
 
+
+    
     private void Start()
     {
         gameManager = GameManager.Instance;
-    
+        displayNamePlayer.text = "Bienvenido: "+ PlayFabConstants.displayName;
+        Debug.Log("nombre del displayname es: " + PlayerPrefs.GetString(PlayFabConstants.SavedUsername, ""));
+        
+        //ProgressBar
+        
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        
         //Seleccion de personaje
         index = PlayerPrefs.GetInt("IndexPlayer");
         
@@ -44,6 +65,12 @@ public class HUD : MonoBehaviour
         }
         
         ChangeScene();
+
+        if (currentScene == 3)
+        {
+            currentTime = Options.GlobalVar.currentTime;
+            progressBar.maxValue = currentTime;
+        }
     }
 
     void Update()
@@ -52,9 +79,11 @@ public class HUD : MonoBehaviour
         
         // Resta el tiempo transcurrido desde el último frame
         currentTime -= Time.deltaTime;
+        Debug.Log("tiempo del nivel: " + currentTime);
+        progressBar.value = currentTime;
         //GameManager.SumarPuntos(1);
         // Si se cumple el tiempo deseado, llama al método GameOver
-        if (currentTime <= 0f)
+        if (currentTime < 0.5f && currentTime > -0.5f)
         {
             gameManager.GameOver();
         }
@@ -163,9 +192,25 @@ public class HUD : MonoBehaviour
 
     public void PlayLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       //AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         //Cargar escena del nivel del juego
+        StartCoroutine(LoadAsync());
     }
+
+    IEnumerator LoadAsync()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        loadInProgress.SetActive(true);
+        while(!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            Debug.Log("progeso de carga: " + progress);
+            yield return null;
+        }
+    }
+    
+    
+   
 
 
 }

@@ -127,9 +127,10 @@ namespace Login {
             
             GetPlayerProfile(result.PlayFabId);
             Debug.Log("nombre usuario playfab: " + result.InfoResultPayload.PlayerProfile.DisplayName);
-
+            PlayFabConstants.displayName = result.InfoResultPayload.PlayerProfile.DisplayName;
+            
             PlayerPrefs.SetString(PlayFabConstants.SavedUsername, loginUi.username.text);
-
+           
             loginInProgress.SetActive(false);
 
             SceneManager.LoadScene(1);
@@ -172,9 +173,13 @@ namespace Login {
                 PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
                     {
                         DisplayName = result.AccountInfo.Username,
-                    }, 
-                    result => Debug.Log("The player's display name is now: " + result.DisplayName),
-                    error => Debug.Log(error.GenerateErrorReport()));
+                    },
+                    result =>
+                    {
+                        Debug.Log("The player's display name is now: " + result.DisplayName);
+                        Debug.Log("The player's display name in PlatConstants: " + PlayFabConstants.displayName);
+                    },
+                  error => Debug.Log(error.GenerateErrorReport()));
             }
             else
             {

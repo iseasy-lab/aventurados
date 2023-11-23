@@ -7,7 +7,7 @@ using PlayFab;
 
 public class GameManager : MonoBehaviour
 {
-    private int puntosTotales;
+    private int puntosTotales = -1;
     private const string LeaderboardName = "Leaderboard";
     private PlayFabUpdatePlayerStatistics playFabUpdatePlayerStatistics;
     private string playerId;

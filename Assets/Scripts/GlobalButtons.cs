@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Botones : MonoBehaviour
+public class GlobalButtons : MonoBehaviour
 {
     public void PulsarJugar()
     {
@@ -34,6 +34,13 @@ public class Botones : MonoBehaviour
     {
         Debug.Log("Salir");
         Application.Quit();
+    }
+    
+    public void PulsarCerrarSesion()
+    {
+        Debug.Log("CerrandoSesion");
+        PlayFab.PlayFabClientAPI.ForgetAllCredentials();
+        SceneManager.LoadScene(0);
     }
 
 

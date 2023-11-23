@@ -30,6 +30,8 @@ namespace Leaderboard
             if (PlayFabClientAPI.IsClientLoggedIn()) {
                 Debug.Log("Usuario logeado");
             }
+            
+            playFabGetLeaderboard.GetLeaderboardEntries(0, 10, LeaderboardName);
             //PlayFabClientAPI.GetUserData(request);
         }
         
