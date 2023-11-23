@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     //Personajes
     public List<Characters> charactersList;
     
+    //Escenas
+    public List<Scene> scenesList;
+    
     public static GameManager Instance { get; private set; }
     public HUD hud;
 

@@ -258,6 +258,7 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Vector\IStdVector.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct\Veci.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum\ReduceDimension.cs" />
+     <Compile Include="Assets\Scripts\LevelCustom\Scene.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\ConnectedComponent.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\flann\Index.cs" />
@@ -488,6 +489,7 @@
      <Compile Include="Assets\OpenCV+Unity\Demo\OCR.Alphabet\AlphabetOCRScene.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Unity\Unity.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\imgproc\NativeMethods_imgproc.cs" />
+     <Compile Include="Assets\Scripts\Scene\SpawnScene.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\superres\DenseOpticalFlowExt.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\features2d\FlannBasedMatcher.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum\InOutArrayKind.cs" />
@@ -517,6 +519,7 @@
      <Folder Include="Assets" />
      <Folder Include="Assets\EgyptMonsters\Demo\DemoAssets" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Tracking" />
+     <Folder Include="Assets\Scripts\Scenes" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\ml" />
      <Folder Include="Assets\Imagenes\backgrounds" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\video" />
@@ -548,6 +551,7 @@
      <None Include="Assets\gmcs.rsp" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Plugins\Windows" />
+     <Folder Include="Assets\Imagenes\backgrounds\Car" />
      <Folder Include="Assets\EgyptMonsters" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\photo" />
      <None Include="Assets\Scripts\haarcascade_frontalface_default.xml" />
@@ -559,7 +563,8 @@
      <Folder Include="Assets\Scripts\LevelCustom" />
      <Folder Include="Assets\OpenCV+Unity\Plugins\macOS" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts" />
-     <Folder Include="Assets\Imagenes\layers" />
+     <Folder Include="Assets\Prefabs\Backgrounds" />
+     <Folder Include="Assets\Imagenes\backgrounds\Ship" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\3D\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\flann" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01" />
@@ -591,6 +596,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\OpenCV+Unity\Plugins\Android\x86" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke" />
+     <Folder Include="Assets\Prefabs\Characters" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Demo\OCR.Alphabet" />
@@ -663,6 +669,7 @@
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Document_Scanner\Resources" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Lobby" />
+     <Folder Include="Assets\Scripts\Scene" />
      <None Include="Assets\OpenCV+Unity\Demo\Face_Recognizer\face-recognizer.xml" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d\Enum" />
      <Folder Include="Assets\Scripts\Player" />
@@ -685,6 +692,7 @@
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
      <Folder Include="Assets\Scripts\Login" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Scenes" />
+     <Folder Include="Assets\Imagenes\backgrounds\Eagle" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\stitching" />
      <Folder Include="Assets\Modelos\Planets\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\DLib" />

@@ -17,16 +17,30 @@ public class HUD : MonoBehaviour
     private int index;
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI name;
+    
+    //Seleccion de escenas
+    private int indexScene;
+    [SerializeField] private Image imageScene;
+    [SerializeField] private TextMeshProUGUI nameScene;
 
     private void Start()
     {
         gameManager = GameManager.Instance;
-
+    
+        //Seleccion de personaje
         index = PlayerPrefs.GetInt("IndexPlayer");
         
         if(index > gameManager.charactersList.Count - 1)
         {
             index = 0;
+        }
+        
+        //Seleccion de escena
+        indexScene = PlayerPrefs.GetInt("IndexScene");
+        
+        if(indexScene > gameManager.scenesList.Count - 1)
+        {
+            indexScene = 0;
         }
         
         ChangeScene();
@@ -75,10 +89,18 @@ public class HUD : MonoBehaviour
     
     private void ChangeScene()
     {
+        //Seleccion de personajes
         PlayerPrefs.SetInt("IndexPlayer", index);
         image.sprite = gameManager.charactersList[index].image;
         name.text = gameManager.charactersList[index].name;
+        
+        //Seleccion de escenas
+        PlayerPrefs.SetInt("IndexScene", indexScene);
+        imageScene.sprite = gameManager.scenesList[indexScene].imageScene;
+        nameScene.text = gameManager.scenesList[indexScene].nameScene;
     }
+    
+    #region ButtonCharacter
     
     public void NextCharacter()
     {
@@ -107,6 +129,37 @@ public class HUD : MonoBehaviour
         }
         ChangeScene();
     }
+    #endregion
+    
+    #region ButtonScene
+    public void NextScene()
+    {
+       
+        if (indexScene == gameManager.scenesList.Count - 1)
+        {
+            indexScene = 0;
+        }
+        else
+        {
+            indexScene += 1;
+        }
+        ChangeScene();
+    }
+    
+    public void PrevScene()
+    {
+       
+        if (indexScene == 0)
+        {
+            indexScene = gameManager.scenesList.Count - 1;
+        }
+        else
+        {
+            indexScene -= 1;
+        }
+        ChangeScene();
+    }
+    #endregion
 
     public void PlayLevel()
     {
