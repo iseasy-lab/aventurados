@@ -78,24 +78,11 @@ public class NewBehaviourScript : MonoBehaviour
     async void Update()
     {
         
-        if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.Q))
-        {
-            // Liberar los recursos
-            webcamTexture.Stop();
-            backgroundSubtractor.Dispose();
-            kernel.Dispose();
-            prevFrame.Dispose();
-            Cv2.DestroyAllWindows();
-            //frame.Destroy();
-            // Se cierra el juego
-            Application.Quit();
-        }
-        
         // Obtener el fotograma actual de forma asíncrona
         Mat frame = await GetFrameAsync();
         // Mostrar el resultado solo si hay movimiento y hay movimiento de color rojo o verde
           
-            Cv2.ImShow("Color Detection", frame);
+            //Cv2.ImShow("Color Detection", frame);
             rb.velocity = Vector3.zero;
 
             switch (hayMovimientoRapidoRojo, hayMovimientoVerde)

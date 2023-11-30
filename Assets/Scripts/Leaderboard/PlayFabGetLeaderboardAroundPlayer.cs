@@ -30,12 +30,16 @@ namespace Leaderboard
         {
             var leaderboard = new StringBuilder();
             
+            // Formato de alineación con 10 caracteres de espacio y alineación a la izquierda
+            string formato = "{0,10}{1,35}{2,18}";
+            
             foreach (var playerLeaderboardEntry in response.Leaderboard)
             {
-                leaderboard.AppendLine($"{playerLeaderboardEntry.Position + 1}                     {playerLeaderboardEntry.DisplayName}                             {playerLeaderboardEntry.StatValue}");
+                //leaderboard.AppendLine($"{playerLeaderboardEntry.Position + 1}                     {playerLeaderboardEntry.DisplayName}                             {playerLeaderboardEntry.StatValue}");
+                leaderboard.AppendLine(String.Format(formato, playerLeaderboardEntry.Position + 1, playerLeaderboardEntry.DisplayName, playerLeaderboardEntry.StatValue));
             }
-
             OnSuccess?.Invoke(leaderboard.ToString());
+            
         }
     }
 }

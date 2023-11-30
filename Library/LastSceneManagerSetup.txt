@@ -1,9 +1,29 @@
 sceneSetups:
-- path: Assets/Scenes/SampleSceneLogin.unity
+- path: Assets/Scenes/MainScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+- path: Assets/Scenes/Tutorial1.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/SampleSceneLogin.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
 - path: Assets/Scenes/MainMenu.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/SelectorNivel.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Tutorial2.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/EscenaJuego.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
@@ -12,14 +32,6 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Options.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/SelectorNivel.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/EscenaJuego.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0

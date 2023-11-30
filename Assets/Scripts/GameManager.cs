@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
         Debug.Log("Puntos enviados: " + puntosTotales);
         playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
     }

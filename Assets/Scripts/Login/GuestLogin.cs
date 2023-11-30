@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Text;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEditor;
 using UnityEngine;
 
 namespace Login {
@@ -23,6 +24,7 @@ namespace Login {
             if (guestLoginParams == null) {
                 loginFailure.Invoke(new PlayFabError());
                 Debug.Log("Parametros de login vacios");
+                EditorUtility.DisplayDialog("Error", "Parametros de login vacios", "Aceptar");
 
                 return;
             }

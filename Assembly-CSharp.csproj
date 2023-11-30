@@ -203,6 +203,7 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Vector\VectorOfVectorDouble.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Model\LineSegmentPolar.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\ml\KNearest.cs" />
+     <Compile Include="Assets\Scripts\Login\UiController.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Delegate\CvErrorCallback.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d\StereoBM.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Cv2\Cv2_video.cs" />

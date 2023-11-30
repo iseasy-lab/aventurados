@@ -1,6 +1,7 @@
 ﻿using System;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEditor;
 using UnityEngine;
 
 namespace Login {
@@ -20,7 +21,7 @@ namespace Login {
             if (emailLoginParams == null) {
                 loginFailure.Invoke(new PlayFabError());
                 Debug.Log("Credenciales de login vacias");
-
+                EditorUtility.DisplayDialog("Credenciales Inválidas", "Credenciales de login vacias", "Aceptar");
                 return;
             }
             

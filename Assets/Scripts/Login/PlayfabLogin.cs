@@ -1,5 +1,6 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,7 +22,7 @@ namespace Login {
             loginUi.username.text = PlayerPrefs.GetString(PlayFabConstants.SavedUsername, "");
 
             if (PlayFabClientAPI.IsClientLoggedIn()) {
-                Debug.LogWarning("User is already logged in");
+                Debug.LogWarning("Usuario logeado");
             }
         }
 
@@ -43,13 +44,16 @@ namespace Login {
             string errorMessage = "";
 
             if (loginUi.username.text.Length < 5) {
-                errorMessage = "Nombre de usuario debe tener almenos 5 caracteres";
+                errorMessage = "El nombre de usuario debe tener almenos 5 caracteres";
+                
             } else if (loginUi.password.text.Length < 8) {
-                errorMessage = "Contrasena debe tener almenos 8 caracteres";
+                errorMessage = "La contraseña debe tener almenos 8 caracteres";
+                
             }
 
             if (errorMessage.Length > 0) {
                 Debug.Log(errorMessage);
+                EditorUtility.DisplayDialog("Credenciales Inválidas", errorMessage, "Aceptar");
                 return false;
             }
 
@@ -81,19 +85,25 @@ namespace Login {
             string errorMessage = "";
 
             if (!registerUi.email.text.Contains("@")) {
-                errorMessage = "E-mail invalido";
+                errorMessage = "E-mail inválido";
+                
             } else if (registerUi.email.text.Length < 5) {
-                errorMessage = "E-mail invalido";
+                errorMessage = "El e-mail debe tener almenos 5 caracteres";
+               
             } else if (registerUi.username.text.Length < 5) {
-                errorMessage = "Username debe tener almenos 5 caracteres";
+                errorMessage = "El nomber de usuario debe tener almenos 5 caracteres";
+                
             } else if (registerUi.password.text.Length < 8) {
-                errorMessage = "Password debe tener almenos 8 caracteres";
+                errorMessage = "La contraseña debe tener almenos 8 caracteres";
+                
             } else if (!registerUi.password.text.Equals(registerUi.verifyPassword.text)) {
                 errorMessage = "Las contraseñas no coinciden";
+                
             }
 
             if (errorMessage.Length > 0) {
                 Debug.Log(errorMessage);
+                EditorUtility.DisplayDialog("Credenciales Inválidas", errorMessage, "Aceptar");
                 return false;
             }
 
@@ -102,6 +112,7 @@ namespace Login {
 
         private void OnRegisterSuccess(RegisterPlayFabUserResult result) {
             Debug.Log("Register Success!");
+            EditorUtility.DisplayDialog("Usuario Registrado", "Usuario registrado con éxito", "Aceptar");
 
             PlayerPrefs.SetString("USERNAME", registerUi.username.text);
             PlayerPrefs.SetString("PW", registerUi.password.text);
@@ -133,7 +144,7 @@ namespace Login {
            
             loginInProgress.SetActive(false);
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
 
         }
 
@@ -151,6 +162,7 @@ namespace Login {
         private void OnLoginFailure(PlayFabError error) {
             Debug.Log("Login failure: " + error.Error + "  " + error.ErrorDetails + error + "  " +
                            error.ApiEndpoint + "  " + error.ErrorMessage);
+            EditorUtility.DisplayDialog("Error", "Usuario o contraseña invalidos", "Ok");
             loginInProgress.SetActive(false);
             Debug.Log(error.GenerateErrorReport());
         }
@@ -183,10 +195,12 @@ namespace Login {
             }
             else
             {
+                System.Random rnd = new System.Random();
                 PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
                     {
                         //DisplayName = "Jugador " + Random.Range(0, 1000).ToString(),
-                        DisplayName = "Jugador Invitado",
+                        
+                        DisplayName = "Jugador Invitado" + rnd.Next(100000, 1000000).ToString(),
                     }, 
                     result => Debug.Log("The player's display name is now: " + result.DisplayName),
                     error => Debug.Log(error.GenerateErrorReport()));

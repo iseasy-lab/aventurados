@@ -9,11 +9,11 @@ namespace Leaderboard
 {
     public class Main : MonoBehaviour
     {
-        [FormerlySerializedAs("_getLeaderboardButton")] [SerializeField] private Button getLeaderboardButton;
-        [FormerlySerializedAs("_getPlayerScoreButton")] [SerializeField] private Button getPlayerScoreButton;
-        [FormerlySerializedAs("_regresarButton")] [SerializeField] private Button regresarButton;
-        [FormerlySerializedAs("_resultsText")] [SerializeField] private TextMeshProUGUI resultsText;
-       
+        [SerializeField] private Button getLeaderboardButton;
+        [SerializeField] private Button getPlayerScoreButton;
+        [SerializeField] private Button regresarButton;
+        [SerializeField] private TextMeshProUGUI resultsText;
+        
         private const string LeaderboardName = "Leaderboard";
 
         private string playerId;
@@ -40,7 +40,7 @@ namespace Leaderboard
         {
             playFabGetLeaderboardAroundPlayer = new PlayFabGetLeaderboardAroundPlayer();
             playFabGetLeaderboardAroundPlayer.OnSuccess += result => resultsText.SetText(result);
-
+            
             playFabGetLeaderboard = new PlayFabGetLeaderboard();
             playFabGetLeaderboard.OnSuccess += result => resultsText.SetText(result);
         }
@@ -64,7 +64,7 @@ namespace Leaderboard
         private void OnRegresarButtonPressed()
         {
             Debug.Log("Regresando al menu principal");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
         
     }

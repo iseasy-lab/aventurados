@@ -66,7 +66,7 @@ public class HUD : MonoBehaviour
         
         ChangeScene();
 
-        if (currentScene == 3)
+        if (currentScene == 6)
         {
             currentTime = Options.GlobalVar.currentTime;
             progressBar.maxValue = currentTime;
@@ -87,6 +87,10 @@ public class HUD : MonoBehaviour
         {
             gameManager.GameOver();
         }
+        if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.Space))
+        {
+            Pause();
+        }
     }
 
     public void ActualizarPuntos(int puntosTotales)
@@ -106,13 +110,13 @@ public class HUD : MonoBehaviour
     
     public void RestartLevel()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
     
     public void Quit()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
         Time.timeScale = 1f;
     }
     
@@ -195,18 +199,23 @@ public class HUD : MonoBehaviour
        //AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         //Cargar escena del nivel del juego
         StartCoroutine(LoadAsync());
+        loadInProgress.SetActive(true);
     }
 
     IEnumerator LoadAsync()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         loadInProgress.SetActive(true);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        
         while(!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            Debug.Log("progeso de carga: " + progress);
+            //float progress = Mathf.Clamp01(operation.progress / .9f);
+            loadInProgress.SetActive(true);
+            //Debug.Log("progeso de carga: " + progress);
             yield return null;
         }
+        
+        //yield return null;
     }
     
     
