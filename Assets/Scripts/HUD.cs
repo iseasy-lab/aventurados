@@ -1,11 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using PlayFab;
-using PlayFab.ClientModels;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
@@ -16,11 +13,12 @@ public class HUD : MonoBehaviour
     
     //Progressbar del tiempo
     [SerializeField] private Slider progressBar;
+    
     private int currentScene;
     
     private float currentTime = -1;
 
-    public TextMeshProUGUI Puntos;
+    [FormerlySerializedAs("Puntos")] public TextMeshProUGUI puntos;
     
     //Impresion del nombre de usuario
     [SerializeField] private TextMeshProUGUI displayNamePlayer;
@@ -41,7 +39,7 @@ public class HUD : MonoBehaviour
     private void Start()
     {
         gameManager = GameManager.Instance;
-        displayNamePlayer.text = "Bienvenido: "+ PlayFabConstants.displayName;
+        displayNamePlayer.text = "Bienvenido: "+ PlayerPrefs.GetString("displayName", "");
         Debug.Log("nombre del displayname es: " + PlayerPrefs.GetString(PlayFabConstants.SavedUsername, ""));
         
         //ProgressBar
@@ -75,13 +73,13 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        Puntos.text = gameManager.PuntosTotales.ToString();
+        puntos.text = gameManager.PuntosTotales.ToString();
         
         // Resta el tiempo transcurrido desde el último frame
         currentTime -= Time.deltaTime;
-        Debug.Log("tiempo del nivel: " + currentTime);
+        //Debug.Log("tiempo del nivel: " + currentTime);
         progressBar.value = currentTime;
-        //GameManager.SumarPuntos(1);
+        //gameManager.SumarPuntos(1);
         // Si se cumple el tiempo deseado, llama al método GameOver
         if (currentTime < 0.5f && currentTime > -0.5f)
         {
@@ -95,7 +93,7 @@ public class HUD : MonoBehaviour
 
     public void ActualizarPuntos(int puntosTotales)
     {
-        Puntos.text = puntosTotales.ToString();
+        puntos.text = puntosTotales.ToString();
     }
 
     public void Pause()
@@ -210,7 +208,7 @@ public class HUD : MonoBehaviour
         while(!operation.isDone)
         {
             //float progress = Mathf.Clamp01(operation.progress / .9f);
-            loadInProgress.SetActive(true);
+            
             //Debug.Log("progeso de carga: " + progress);
             yield return null;
         }

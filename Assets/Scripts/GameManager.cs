@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Cuidado! Mas de un GameManager en escena.");
+            Debug.Log("Cuidado! Mas de un gameManager en escena.");
         }
     }
     
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene(4);
-        Debug.Log("Puntos enviados: " + puntosTotales);
+        Debug.Log("puntos enviados: " + puntosTotales);
         playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
     }
     

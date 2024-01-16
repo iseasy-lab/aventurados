@@ -5,14 +5,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Login {
-    /// <summary>
-    /// Handle login scene events
-    /// </summary>
     public class PlayfabLogin : MonoBehaviour {
         
         [SerializeField] private LoginUi loginUi;
         [SerializeField] private RegisterUi registerUi;
         [SerializeField] private GameObject loginInProgress;
+        [SerializeField] private GameObject loginPanel;
+        [SerializeField] private GameObject registerPanel;
         
         public void Start() {
             QualitySettings.vSyncCount = 0;
@@ -115,11 +114,15 @@ namespace Login {
             EditorUtility.DisplayDialog("Usuario Registrado", "Usuario registrado con éxito", "Aceptar");
 
             PlayerPrefs.SetString("USERNAME", registerUi.username.text);
+            //PlayerPrefs.SetString("DISPLAYNAME", registerUi.username.text);
             PlayerPrefs.SetString("PW", registerUi.password.text);
 
             Debug.Log(result.PlayFabId);
             Debug.Log(result.Username);
+            //Debug.Log(result.DisplayName);
             loginInProgress.SetActive(false);
+            loginPanel.SetActive(true);
+            registerPanel.SetActive(false);
         }
 
         #endregion
@@ -141,7 +144,7 @@ namespace Login {
             PlayFabConstants.displayName = result.InfoResultPayload.PlayerProfile.DisplayName;
             
             PlayerPrefs.SetString(PlayFabConstants.SavedUsername, loginUi.username.text);
-           
+            PlayerPrefs.SetString("displayName", result.InfoResultPayload.PlayerProfile.DisplayName);
             loginInProgress.SetActive(false);
 
             SceneManager.LoadScene(3);
@@ -200,7 +203,7 @@ namespace Login {
                     {
                         //DisplayName = "Jugador " + Random.Range(0, 1000).ToString(),
                         
-                        DisplayName = "Jugador Invitado" + rnd.Next(100000, 1000000).ToString(),
+                        DisplayName = "Jugador Invitado",
                     }, 
                     result => Debug.Log("The player's display name is now: " + result.DisplayName),
                     error => Debug.Log(error.GenerateErrorReport()));
