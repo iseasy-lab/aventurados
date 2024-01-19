@@ -7,10 +7,12 @@ using PlayFab;
 
 public class GameManager : MonoBehaviour
 {
-    private int puntosTotales = -1;
+    private int puntosTotales = 0;
     private const string LeaderboardName = "Leaderboard";
     private PlayFabUpdatePlayerStatistics playFabUpdatePlayerStatistics;
     private string playerId;
+    
+    //[SerializeField] private GameObject menuReport;
     
     //Personajes
     public List<Characters> charactersList;
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
     public void SumarPuntos(int puntosSumar)
     {
         puntosTotales += puntosSumar;
-        Debug.Log(puntosTotales);
+        //Debug.Log(puntosTotales);
         hud.ActualizarPuntos(puntosTotales);
     }
 
@@ -86,7 +88,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene(4);
+        //SceneManager.LoadScene(4);
+        //menuReport.SetActive(true);
         Debug.Log("puntos enviados: " + puntosTotales);
         playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
     }

@@ -299,6 +299,7 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Algorithm.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Enum\LineTypes.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct\IVec.cs" />
+     <Compile Include="Assets\Scripts\Reports\Reports.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\ml\NativeMethods_ml_StatModel.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\imgproc\NativeMethods_imgproc_GeneralizedHough.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -702,6 +703,7 @@
      <Folder Include="Assets\OpenCV+Unity\Documentation" />
      <None Include="Assets\Modelos\Pixel Boxes - lowpoly\Licence.txt" />
      <Folder Include="Assets\OpenCV+Unity\Plugins\Android" />
+     <Folder Include="Assets\Scripts\Reports" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\flann\IndexParams" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\superres" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Unity" />

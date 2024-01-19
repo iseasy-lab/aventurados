@@ -34,13 +34,15 @@ public class HUD : MonoBehaviour
     [SerializeField] private Image imageScene;
     [SerializeField] private TextMeshProUGUI nameScene;
 
-
+    //Menu de reporte
+    [SerializeField] private GameObject menuReport;
+    [SerializeField] private TextMeshProUGUI stepCounter;
     
     private void Start()
     {
         gameManager = GameManager.Instance;
         displayNamePlayer.text = "Bienvenido: "+ PlayerPrefs.GetString("displayName", "");
-        Debug.Log("nombre del displayname es: " + PlayerPrefs.GetString(PlayFabConstants.SavedUsername, ""));
+        //Debug.Log("nombre del displayname es: " + PlayerPrefs.GetString(PlayFabConstants.SavedUsername, ""));
         
         //ProgressBar
         
@@ -84,6 +86,9 @@ public class HUD : MonoBehaviour
         if (currentTime < 0.5f && currentTime > -0.5f)
         {
             gameManager.GameOver();
+            Time.timeScale = 0f;
+            menuReport.SetActive(true);
+            stepCounter.text = Reports.Reports.StepCounter.ToString();
         }
         if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.Space))
         {
@@ -191,6 +196,26 @@ public class HUD : MonoBehaviour
         ChangeScene();
     }
     #endregion
+
+    public void NextLevel()
+    {
+        Resume();
+        int indexNextLevel = indexScene + 1;
+        
+        if(indexNextLevel > gameManager.scenesList.Count - 1)
+        {
+            indexNextLevel = 0;
+        }
+        
+        
+        //Seleccion de escenas
+        PlayerPrefs.SetInt("IndexScene", indexNextLevel);
+        imageScene.sprite = gameManager.scenesList[indexNextLevel].imageScene;
+        nameScene.text = gameManager.scenesList[indexNextLevel].nameScene;
+        
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        
+    }
 
     public void PlayLevel()
     {

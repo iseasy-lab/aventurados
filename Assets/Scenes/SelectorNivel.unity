@@ -1741,6 +1741,8 @@ MonoBehaviour:
   name: {fileID: 810512312}
   imageScene: {fileID: 1652264828}
   nameScene: {fileID: 994514695}
+  menuReport: {fileID: 0}
+  stepCounter: {fileID: 0}
 --- !u!114 &596389554
 MonoBehaviour:
   m_ObjectHideFlags: 0

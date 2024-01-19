@@ -5,32 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa7f41d3-cd9d-4345-a1d0-2eee289cc06f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Reports/Reports.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototipo_Tesis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototipo_Tesis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/EscenaJuego.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EscenaJuego.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Options.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Options.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneLogin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleSceneLogin.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectorNivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectorNivel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/haarcascade_frontalface_default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Colision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Colision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ColorTracking.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FaceDetector.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlobalButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GlobalButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/Leaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/Leaderboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/PlayfabLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/PlayfabLogin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Options/GlobalVar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Options/GlobalVar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptMovimiento.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptMovimiento.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptMovimientoCajas.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectorNivel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/haarcascade_frontalface_default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
@@ -45,6 +34,7 @@
       <change beforePath="$PROJECT_DIR$/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/fullprofile.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
@@ -53,6 +43,7 @@
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -297,7 +288,9 @@
       <workItem from="1702436817473" duration="2686000" />
       <workItem from="1704458268920" duration="1408000" />
       <workItem from="1705322365160" duration="12132000" />
-      <workItem from="1705415305913" duration="4172000" />
+      <workItem from="1705415305913" duration="7049000" />
+      <workItem from="1705450715616" duration="10932000" />
+      <workItem from="1705631730360" duration="9255000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: mejoramiento de la capacidad de detectar movimiento de objetos de color rojo">
       <option name="closed" value="true" />
@@ -403,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701353138973</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Feat: selección de la dificultad del juego&#10;Fix: corrección de las interfaces, botón para ver la contraseña y el displayName del usuario en el menú principal&#10;Style: formato del texto en el script de ScriptMovimiento">
+      <option name="closed" value="true" />
+      <created>1705419709255</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705419709255</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +462,8 @@
     <MESSAGE value="Feat: sistema de seleccion del nivel a jugar: estan implementados dos niveles jugables" />
     <MESSAGE value="Feat: presentación del nombre de usuario en la pantalla de menu. Se añade un progressbar de tiempo durante la ejecución del nivel del juego.&#10;Fix: Estetica de las interfaces de: MenuPrincipal, Seleccion de Nivel, y los botones en general" />
     <MESSAGE value="Feat: incorporación de nuevas escenas a manera de tutoriales; se incluyó ventanas emergentes en caso de errores en login y register&#10;Fix: se corrigieron los indices de las escenas; las ventanas de ayuda y la estética en general" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: incorporación de nuevas escenas a manera de tutoriales; se incluyó ventanas emergentes en caso de errores en login y register&#10;Fix: se corrigieron los indices de las escenas; las ventanas de ayuda y la estética en general" />
+    <MESSAGE value="Feat: selección de la dificultad del juego&#10;Fix: corrección de las interfaces, botón para ver la contraseña y el displayName del usuario en el menú principal&#10;Style: formato del texto en el script de ScriptMovimiento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: selección de la dificultad del juego&#10;Fix: corrección de las interfaces, botón para ver la contraseña y el displayName del usuario en el menú principal&#10;Style: formato del texto en el script de ScriptMovimiento" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

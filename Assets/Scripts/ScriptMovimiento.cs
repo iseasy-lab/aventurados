@@ -3,6 +3,7 @@ using UnityEngine;
 using System;
 using OpenCvSharp;
 using System.Threading.Tasks;
+using Reports;
 
 [RequireComponent(typeof(Rigidbody))]
 public class NewBehaviourScript : MonoBehaviour
@@ -12,11 +13,10 @@ public class NewBehaviourScript : MonoBehaviour
 
     //Variables Globales
 
-    private double
-        speedThreshold =
-            Options.GlobalVar
-                .speedThreshold; // Variable para almacenar el umbral de diferencia para objetos de color rojo
+    // Variable para almacenar el umbral de diferencia para objetos de color rojo
+    private double speedThreshold = Options.GlobalVar.speedThreshold;
 
+    // Variables para almacenar la velocidad positiva y negativa
     private float velocidadPositiva;
     private float velocidadNegativa;
 
@@ -61,12 +61,32 @@ public class NewBehaviourScript : MonoBehaviour
     //Variable para almacenar el centro del rectángulo en el fotograma anterior
     Point prevCenterRed;
 
+    //Definicion maquina de estado finito
+    public enum EstadoMovimiento
+    {
+        Reposo,
+        MovimientoDetectado
+    }
+
+    EstadoMovimiento estadoActual = EstadoMovimiento.Reposo;
+    //int framesMovimientoDetectado = 0;
+
+    //Buffer historico de frames
+    private const int bufferSize = 8;
+    bool[] moveBuffer = new bool[bufferSize];
+    int bufferIndex = 0;
+    
+    //Contador de Pasos
+    public Reports.Reports reports;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         velocidadPositiva = PlayerPrefs.GetFloat("velocidadPositiva", 6f);
         velocidadNegativa = PlayerPrefs.GetFloat("velocidadNegativa", 0f);
+        
+        reports = new Reports.Reports();
 
         rb = GetComponent<Rigidbody>();
 
@@ -81,6 +101,7 @@ public class NewBehaviourScript : MonoBehaviour
         //Debug.Log("Dificultad seteada con velpos" + velocidadPositiva + " con velneg " + velocidadNegativa);
     }
 
+
     // Update is called once per frame
     async void Update()
     {
@@ -90,7 +111,18 @@ public class NewBehaviourScript : MonoBehaviour
         //Debug.Log("la dificultad esta con velpos " + velocidadPositiva + " con velneg " + velocidadNegativa);
         Cv2.ImShow("Color Detection", frame);
         rb.velocity = Vector3.zero;
+        
+        //Detectar movimiento instantaneo
+        bool instantMove = hayMovimientoRapidoRojo;
+        
+        //Almacenar en buffer
+        moveBuffer[bufferIndex] = instantMove;
+        bufferIndex = (bufferIndex + 1) % bufferSize;
+        
+        //Analizar buffer
+        bool trueMovement = BufferAnalyze(moveBuffer);
 
+        /*
         switch (hayMovimientoRapidoRojo, hayMovimientoVerde)
         {
             case (true, false):
@@ -120,6 +152,44 @@ public class NewBehaviourScript : MonoBehaviour
                           velocidadNegativa);
                 break;
         }
+        */
+
+        switch (estadoActual)
+        {
+            case EstadoMovimiento.Reposo:
+                transform.position += new Vector3(0, 0, velocidadNegativa * Time.deltaTime);
+                Debug.Log("Estado actual: " + estadoActual);
+                if (trueMovement)
+                {
+                    estadoActual = EstadoMovimiento.MovimientoDetectado;
+                    reports.AddStep();
+                    //int stepAux = reports.StepCounter;
+                    //Debug.Log("REPORTERIA: " + reports.StepCounter);
+                    // Empezar a contar frames
+                    //framesMovimientoDetectado = 0;
+                }
+
+                break;
+
+            case EstadoMovimiento.MovimientoDetectado:
+                //framesMovimientoDetectado++;
+                transform.position += new Vector3(0, 0, velocidadPositiva * Time.deltaTime);
+                //transform.position += new Vector3(0, 0, 2 * Time.deltaTime);
+                Debug.Log("Estado actual: " + estadoActual);
+                //Debug.Log("valor de hayMovimientoRapidoRojo: " + hayMovimientoRapidoRojo);
+                Debug.Log("valor de trueMovement: " + trueMovement);
+                if (!trueMovement)
+                {
+                    estadoActual = EstadoMovimiento.Reposo;
+                }
+
+                break;
+            
+        }
+
+
+        // Mantener true mientras esté en estado de movimiento detectado
+        //hayMovimientoRapidoRojo = (estadoActual == EstadoMovimiento.MovimientoDetectado);
 
         //rb.velocity = Velocidad * (Input.GetAxis("Horizontal") * Vector3.right + Input.GetAxis("Vertical") * Vector3.forward);
     }
@@ -190,7 +260,7 @@ public class NewBehaviourScript : MonoBehaviour
 
                 // Calcular el centro del rectángulo actual
                 Point centerRed = new Point(roiRed.X + roiRed.Width / 2, roiRed.Y + roiRed.Height / 2);
-                Debug.Log("el centro rojo (center_red): " + centerRed);
+                //Debug.Log("el centro rojo (center_red): " + centerRed);
 
                 // Si existe un centro previo, calcular la distancia entre los dos centros
                 if (prevCenterRed != null)
@@ -202,13 +272,13 @@ public class NewBehaviourScript : MonoBehaviour
                     if (distance > speedThreshold)
                     {
                         hayMovimientoRapidoRojo = true;
-                        Debug.Log("La distancia recorrida por el objeto es: " + distance);
+                        //Debug.Log("La distancia recorrida por el objeto es: " + distance);
                         //color = Scalar.Red;
                         //Cv2.PutText(frame, message, position, font, size, color);
                     }
                     else
                     {
-                        StartCoroutine(Esperar(2));
+                        //StartCoroutine(Esperar(2));
                         hayMovimientoRapidoRojo = false;
                     }
                 }
@@ -221,14 +291,21 @@ public class NewBehaviourScript : MonoBehaviour
         return redMask;
     }
 
-
-    IEnumerator Esperar(int segundos)
+    //Funcion para analizar el buffer
+    bool BufferAnalyze(bool[] buffer)
     {
-        hayMovimientoRapidoRojo = false;
-        yield return new WaitForSeconds(segundos);
+        int trueCount = 0;
+        foreach (bool b in buffer)
+        {
+            if (b)
+            {
+                trueCount++;
+            }
+        }
 
-        //gameManager.SumarPuntos(1);
+        return trueCount > ((bufferSize / 2) - 1);
     }
+    
 
     void OnDestroy()
     {
