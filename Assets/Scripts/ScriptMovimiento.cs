@@ -1,9 +1,8 @@
-using System.Collections;
 using UnityEngine;
 using System;
 using OpenCvSharp;
 using System.Threading.Tasks;
-using Reports;
+
 
 [RequireComponent(typeof(Rigidbody))]
 public class NewBehaviourScript : MonoBehaviour
@@ -35,7 +34,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Variable para almacenar el estado del movimiento de color rojo
     //public bool hayMovimientoRojo = false;
     // Variable para almacenar el estado del movimiento de color verde
-    public bool hayMovimientoVerde = false;
+    //public bool hayMovimientoVerde = false;
     // Variable para almacenar el fotograma anterior
     //private Mat prevFrame = null;
     // Variable para almacenar el umbral de diferencia
@@ -55,7 +54,7 @@ public class NewBehaviourScript : MonoBehaviour
     Point prevPrevCenterRed;
 
     //Variable para almacenar el estado del movimiento rápido
-    private bool hayMovimientoRapidoRojo = false;
+    private bool hayMovimientoRapidoRojo;
 
 
     //Variable para almacenar el centro del rectángulo en el fotograma anterior
@@ -72,9 +71,9 @@ public class NewBehaviourScript : MonoBehaviour
     //int framesMovimientoDetectado = 0;
 
     //Buffer historico de frames
-    private const int bufferSize = 8;
-    bool[] moveBuffer = new bool[bufferSize];
-    int bufferIndex = 0;
+    private const int BufferSize = 8;
+    bool[] moveBuffer = new bool[BufferSize];
+    int bufferIndex;
     
     //Contador de Pasos
     public Reports.Reports reports;
@@ -117,7 +116,7 @@ public class NewBehaviourScript : MonoBehaviour
         
         //Almacenar en buffer
         moveBuffer[bufferIndex] = instantMove;
-        bufferIndex = (bufferIndex + 1) % bufferSize;
+        bufferIndex = (bufferIndex + 1) % BufferSize;
         
         //Analizar buffer
         bool trueMovement = BufferAnalyze(moveBuffer);
@@ -303,7 +302,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
         }
 
-        return trueCount > ((bufferSize / 2) - 1);
+        return trueCount > ((BufferSize / 2) - 1);
     }
     
 

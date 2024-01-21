@@ -298,8 +298,8 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Cv2\Cv2_imgproc.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Algorithm.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Enum\LineTypes.cs" />
-     <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct\IVec.cs" />
      <Compile Include="Assets\Scripts\Reports\Reports.cs" />
+     <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct\IVec.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\ml\NativeMethods_ml_StatModel.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\imgproc\NativeMethods_imgproc_GeneralizedHough.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -337,9 +337,11 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum\MatDiagType.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\MatExpr_CvMethods.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgcodecs\Enum\ImreadModes.cs" />
+     <Compile Include="Assets\Scripts\Login\ResetPasswordUi.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\highgui\FourCC.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\features2d\BOWKMeansTrainer.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct\Scalar.cs" />
+     <Compile Include="Assets\Scripts\Sound\SoundEntry.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\imgproc\NativeMethods_imgproc_Subdiv2D.cs" />
      <Compile Include="Assets\Scripts\Login\PlayfabLogin.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\xfeatures2d\SURF.cs" />
@@ -616,6 +618,7 @@
      <None Include="Assets\EgyptMonsters\README.txt" />
      <Folder Include="Assets\EgyptMonsters\Prefabs" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\video" />
+     <Folder Include="Assets\Sound" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Enum" />
@@ -628,6 +631,7 @@
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Materials" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\Scripts\Sound" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Models" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Face_Recognizer" />
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\ready_buttons" />

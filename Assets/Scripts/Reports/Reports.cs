@@ -1,7 +1,3 @@
-using UnityEngine;
-using System;
-using UnityEngine.UI;
-
 namespace Reports
 {
     public class Reports
