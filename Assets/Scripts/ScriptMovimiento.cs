@@ -152,40 +152,43 @@ public class NewBehaviourScript : MonoBehaviour
                 break;
         }
         */
-
-        switch (estadoActual)
+        if (Time.timeScale != 0)
         {
-            case EstadoMovimiento.Reposo:
-                transform.position += new Vector3(0, 0, velocidadNegativa * Time.deltaTime);
-                Debug.Log("Estado actual: " + estadoActual);
-                if (trueMovement)
-                {
-                    estadoActual = EstadoMovimiento.MovimientoDetectado;
-                    reports.AddStep();
-                    //int stepAux = reports.StepCounter;
-                    //Debug.Log("REPORTERIA: " + reports.StepCounter);
-                    // Empezar a contar frames
-                    //framesMovimientoDetectado = 0;
-                }
 
-                break;
 
-            case EstadoMovimiento.MovimientoDetectado:
-                //framesMovimientoDetectado++;
-                transform.position += new Vector3(0, 0, velocidadPositiva * Time.deltaTime);
-                //transform.position += new Vector3(0, 0, 2 * Time.deltaTime);
-                Debug.Log("Estado actual: " + estadoActual);
-                //Debug.Log("valor de hayMovimientoRapidoRojo: " + hayMovimientoRapidoRojo);
-                Debug.Log("valor de trueMovement: " + trueMovement);
-                if (!trueMovement)
-                {
-                    estadoActual = EstadoMovimiento.Reposo;
-                }
+            switch (estadoActual)
+            {
+                case EstadoMovimiento.Reposo:
+                    transform.position += new Vector3(0, 0, velocidadNegativa * Time.deltaTime);
+                    Debug.Log("Estado actual: " + estadoActual);
+                    if (trueMovement)
+                    {
+                        estadoActual = EstadoMovimiento.MovimientoDetectado;
+                        reports.AddStep();
+                        //int stepAux = reports.StepCounter;
+                        //Debug.Log("REPORTERIA: " + reports.StepCounter);
+                        // Empezar a contar frames
+                        //framesMovimientoDetectado = 0;
+                    }
 
-                break;
-            
+                    break;
+
+                case EstadoMovimiento.MovimientoDetectado:
+                    //framesMovimientoDetectado++;
+                    transform.position += new Vector3(0, 0, velocidadPositiva * Time.deltaTime);
+                    //transform.position += new Vector3(0, 0, 2 * Time.deltaTime);
+                    Debug.Log("Estado actual: " + estadoActual);
+                    //Debug.Log("valor de hayMovimientoRapidoRojo: " + hayMovimientoRapidoRojo);
+                    Debug.Log("valor de trueMovement: " + trueMovement);
+                    if (!trueMovement)
+                    {
+                        estadoActual = EstadoMovimiento.Reposo;
+                    }
+
+                    break;
+
+            }
         }
-
 
         // Mantener true mientras esté en estado de movimiento detectado
         //hayMovimientoRapidoRojo = (estadoActual == EstadoMovimiento.MovimientoDetectado);

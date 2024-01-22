@@ -21,7 +21,8 @@ namespace Login {
             if (emailLoginParams == null) {
                 loginFailure.Invoke(new PlayFabError());
                 Debug.Log("Credenciales de login vacias");
-                EditorUtility.DisplayDialog("Credenciales Inválidas", "Credenciales de login vacias", "Aceptar");
+                
+                //EditorUtility.DisplayDialog("Credenciales Inválidas", "Credenciales de login vacias", "Aceptar");
                 return;
             }
             

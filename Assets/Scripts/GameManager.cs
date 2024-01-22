@@ -10,6 +10,7 @@ using Scene = LevelCustom.Scene;
 public class GameManager : MonoBehaviour
 {
     private int puntosTotales;
+    public static int auxUpdatePoints = 0;
     private const string LeaderboardName = "Leaderboard";
     private PlayFabUpdatePlayerStatistics playFabUpdatePlayerStatistics;
     private string playerId;
@@ -95,7 +96,12 @@ public class GameManager : MonoBehaviour
     {
         //SceneManager.LoadScene(4);
         //menuReport.SetActive(true);
-        Debug.Log("puntos enviados: " + puntosTotales);
-        playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
+        if (auxUpdatePoints == 0)
+        {
+            Debug.Log("puntos enviados: " + puntosTotales);
+            playFabUpdatePlayerStatistics.UpdatePlayerStatistics(LeaderboardName, puntosTotales);
+            auxUpdatePoints++;
+        }
+        
     }
 }

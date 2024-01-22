@@ -3,6 +3,7 @@ using PlayFab.ClientModels;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Login
 {
@@ -15,6 +16,13 @@ namespace Login
         [SerializeField] private GameObject loginPanel;
         [SerializeField] private GameObject registerPanel;
         [SerializeField] private GameObject resetPasswordPanel;
+
+        [SerializeField] private GameObject errorMessagePanel;
+        [SerializeField] private TextMeshProUGUI txtError;
+        [SerializeField] private TextMeshProUGUI txtErrorTitle;
+        [SerializeField] private GameObject cfmMessagePanel;
+        [SerializeField] private TextMeshProUGUI txtCfm;
+        [SerializeField] private TextMeshProUGUI txtCfmTitle;
 
         public void Start()
         {
@@ -63,7 +71,11 @@ namespace Login
             if (errorMessage.Length > 0)
             {
                 Debug.Log(errorMessage);
-                EditorUtility.DisplayDialog("Credenciales Inválidas", errorMessage, "Aceptar");
+                errorMessagePanel.SetActive(true);
+                //errorText.text = errorMessage;
+                txtErrorTitle.text = "Credenciales Inválidas";
+                txtError.text = errorMessage;
+                //EditorUtility.DisplayDialog("Credenciales Inválidas", errorMessage, "Aceptar");
                 return false;
             }
 
@@ -107,7 +119,10 @@ namespace Login
             if (errorMessage.Length > 0)
             {
                 Debug.Log(errorMessage);
-                EditorUtility.DisplayDialog("Email Inválido", errorMessage, "Aceptar");
+                errorMessagePanel.SetActive(true);
+                txtErrorTitle.text = "Email Inválido";
+                txtError.text = errorMessage;
+                //EditorUtility.DisplayDialog("Email Inválido", errorMessage, "Aceptar");
                 return false;
             }
 
@@ -117,8 +132,10 @@ namespace Login
         private void OnResetPasswordSuccess(SendAccountRecoveryEmailResult result)
         {
             Debug.Log("Reset Password Success!");
-            EditorUtility.DisplayDialog("Contraseña Restablecida",
-                "Se ha enviado un correo a su cuenta de correo electrónico", "Aceptar");
+            errorMessagePanel.SetActive(true);
+            txtErrorTitle.text = "Contraseña Restablecida";
+            txtError.text = "Se ha enviado un correo a su cuenta de correo electrónico";
+            //EditorUtility.DisplayDialog("Contraseña Restablecida","Se ha enviado un correo a su cuenta de correo electrónico", "Aceptar");
             loginInProgress.SetActive(false);
             loginPanel.SetActive(true);
             resetPasswordPanel.SetActive(false);
@@ -128,8 +145,10 @@ namespace Login
         {
             Debug.Log("Reset Password failure: " + error.Error + "  " + error.ErrorDetails + error + "  " +
                       error.ApiEndpoint + "  " + error.ErrorMessage);
-            EditorUtility.DisplayDialog("Error", "No se ha podido enviar el correo electrónico. \n Intente nuevamente.",
-                "Ok");
+            errorMessagePanel.SetActive(true);
+            txtErrorTitle.text = "Error";
+            txtError.text = "No se ha podido enviar el correo electrónico. \n Intente nuevamente.";
+            //EditorUtility.DisplayDialog("Error", "No se ha podido enviar el correo electrónico. \n Intente nuevamente.", "Ok");
             loginInProgress.SetActive(false);
             Debug.Log(error.GenerateErrorReport());
         }
@@ -185,7 +204,10 @@ namespace Login
             if (errorMessage.Length > 0)
             {
                 Debug.Log(errorMessage);
-                EditorUtility.DisplayDialog("Credenciales Inválidas", errorMessage, "Aceptar");
+                errorMessagePanel.SetActive(true);
+                txtErrorTitle.text = "Credenciales Inválidas";
+                txtError.text = errorMessage;
+                //EditorUtility.DisplayDialog("Credenciales Inválidas", errorMessage, "Aceptar");
                 return false;
             }
 
@@ -195,12 +217,15 @@ namespace Login
         private void OnRegisterSuccess(RegisterPlayFabUserResult result)
         {
             Debug.Log("Register Success!");
-            EditorUtility.DisplayDialog("Usuario Registrado", "Usuario registrado con éxito", "Aceptar");
+            cfmMessagePanel.SetActive(true);
+            txtCfmTitle.text = "Usuario Registrado";
+            txtCfm.text = "Usuario registrado con éxito";
+            //EditorUtility.DisplayDialog("Usuario Registrado", "Usuario registrado con éxito", "Aceptar");
 
             PlayerPrefs.SetString("USERNAME", registerUi.username.text);
             //PlayerPrefs.SetString("DISPLAYNAME", registerUi.username.text);
             PlayerPrefs.SetString("PW", registerUi.password.text);
-
+            PlayerPrefs.SetString("displayName", registerUi.username.text);
             Debug.Log(result.PlayFabId);
             Debug.Log(result.Username);
             //Debug.Log(result.DisplayName);
@@ -226,11 +251,13 @@ namespace Login
             Debug.Log("identificador playfab: " + result.PlayFabId);
 
             GetPlayerProfile(result.PlayFabId);
-            Debug.Log("nombre usuario playfab: " + result.InfoResultPayload.PlayerProfile.DisplayName);
-            PlayFabConstants.displayName = result.InfoResultPayload.PlayerProfile.DisplayName;
+            Debug.Log("nombre usuario playfab: --displayname--" + result.InfoResultPayload.PlayerProfile.DisplayName);
+            Debug.Log("nombre usuario playfab: --username--" + result.InfoResultPayload.AccountInfo.Username);
+            PlayFabConstants.displayName = result.InfoResultPayload.AccountInfo.Username;
 
             PlayerPrefs.SetString(PlayFabConstants.SavedUsername, loginUi.username.text);
-            PlayerPrefs.SetString("displayName", result.InfoResultPayload.PlayerProfile.DisplayName);
+            PlayerPrefs.SetString("displayName", loginUi.username.text);
+            PlayerPrefs.SetString("displayName2", result.InfoResultPayload.AccountInfo.Username);
             loginInProgress.SetActive(false);
 
             SceneManager.LoadScene(3);
@@ -252,7 +279,10 @@ namespace Login
         {
             Debug.Log("Login failure: " + error.Error + "  " + error.ErrorDetails + error + "  " +
                       error.ApiEndpoint + "  " + error.ErrorMessage);
-            EditorUtility.DisplayDialog("Error", "Usuario o contraseña invalidos", "Ok");
+            errorMessagePanel.SetActive(true);
+            txtErrorTitle.text = "Error";
+            txtError.text = "Usuario o contraseña invalidos";
+            //EditorUtility.DisplayDialog("Error", "Usuario o contraseña invalidos", "Ok");
             loginInProgress.SetActive(false);
             Debug.Log(error.GenerateErrorReport());
         }
@@ -275,9 +305,10 @@ namespace Login
                     {
                         DisplayName = result.AccountInfo.Username,
                     },
-                    displayNameResult =>
+                    result =>
                     {
-                        Debug.Log("The player's display name is now: " + displayNameResult.DisplayName);
+                        Debug.Log("The player's display name is now: " + result.DisplayName);
+                        PlayerPrefs.SetString("displayName", result.DisplayName);
                         Debug.Log("The player's display name in PlatConstants: " + PlayFabConstants.displayName);
                     },
                     error => Debug.Log(error.GenerateErrorReport()));
@@ -288,13 +319,17 @@ namespace Login
                 PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
                     {
                         //DisplayName = "Jugador " + Random.Range(0, 1000).ToString(),
-
+                        
                         DisplayName = "Jugador Invitado",
+                    }, 
+                    result =>
+                    {
+                        Debug.Log("The player's display name is now: " + result.DisplayName);
+                        PlayerPrefs.SetString("displayName", result.DisplayName);
                     },
-                    displayNameResult =>
-                        Debug.Log("The player's display name is now: " + displayNameResult.DisplayName),
                     error => Debug.Log(error.GenerateErrorReport()));
             }
+            
         }
 
         private void OnDisplayError(PlayFabError error)

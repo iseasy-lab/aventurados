@@ -89,6 +89,7 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\InputOutputArray.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Cv2\Cv2_calib3d.cs" />
      <Compile Include="Assets\Scripts\Util\Rotator.cs" />
+     <Compile Include="Assets\Scripts\Util\PopUpManager.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Model\HierarchyIndex.cs" />
      <Compile Include="Assets\Scripts\Colision.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -516,7 +517,6 @@
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\NativeMethods_xfeatures2d.cs" />
      <Compile Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\flann\IndexParams\SearchParams.cs" />
      <Folder Include="Assets" />
-     <Folder Include="Assets\EgyptMonsters\Demo\DemoAssets" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Tracking" />
      <Folder Include="Assets\Scripts\ScenesPrefabs" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\ml" />
@@ -525,7 +525,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Delegate" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\text" />
-     <Folder Include="Assets\EgyptMonsters\Demo\DemoAssets\Meshes" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Sprites" />
      <Folder Include="Assets\EgyptMonsters\Models\Eagles\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\tracking\Enum" />
@@ -537,7 +536,6 @@
      <Folder Include="Assets\Modelos\Planets\Materials\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\highgui\Enum" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\core" />
-     <Folder Include="Assets\EgyptMonsters\Demo\DemoAssets\Textures" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\photo" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\Textures" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
@@ -553,7 +551,6 @@
      <Folder Include="Assets\Imagenes\backgrounds\Car" />
      <Folder Include="Assets\EgyptMonsters" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\photo" />
-     <None Include="Assets\EgyptMonsters\Demo\DemoAssets\Shaders\GrassAnimate.shader" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\features2d" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Marker_Detector" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
@@ -571,10 +568,8 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\PSD" />
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\icons" />
-     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\symbols" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\aruco\Enum" />
      <Folder Include="Assets\PlayFab\Login" />
-     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\titles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Marker_Detector\Resources" />
@@ -672,15 +667,12 @@
      <None Include="Assets\OpenCV+Unity\Demo\Face_Recognizer\face-recognizer.xml" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d\Enum" />
      <Folder Include="Assets\Scripts\PlayerLevel" />
-     <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\READ ME" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\buttons" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly" />
-     <Folder Include="Assets\EgyptMonsters\Demo\DemoAssets\Materials" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Prefabs" />
      <None Include="Assets\OpenCV+Unity\Demo\Face_Detector\haarcascade_frontalface_default.xml" />
-     <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\Scenes" />
      <Folder Include="Assets\Imagenes\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\shape" />
      <Folder Include="Assets\Modelos\Planets\shader" />
@@ -696,13 +688,11 @@
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\DLib" />
      <Folder Include="Assets\OpenCV+Unity\Assets" />
      <Folder Include="Assets\Modelos\Planets\models\Materials" />
-     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\texts" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Grayscale" />
      <Folder Include="Assets\Modelos\Planets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\ml\Enum" />
-     <Folder Include="Assets\EgyptMonsters\Demo" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Document_Scanner\Scripts" />
      <Folder Include="Assets\OpenCV+Unity\Documentation" />
      <None Include="Assets\Modelos\Pixel Boxes - lowpoly\Licence.txt" />
@@ -736,10 +726,8 @@
      <Folder Include="Assets\OpenCV+Unity\Demo" />
      <Folder Include="Assets\EgyptMonsters\Animators\Eagles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\demo_Scenes" />
      <None Include="Assets\OpenCV+Unity\mcs.rsp" />
      <Folder Include="Assets\Modelos\Planets\models" />
-     <Folder Include="Assets\EgyptMonsters\Demo\DemoAssets\Shaders" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Color Gradient Presets" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />

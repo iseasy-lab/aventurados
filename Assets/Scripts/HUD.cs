@@ -42,10 +42,12 @@ public class HUD : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
+        GameManager.auxUpdatePoints = 0;
         gameManager = GameManager.Instance;
-        displayNamePlayer.text = "Bienvenido: " + PlayerPrefs.GetString("displayName", "");
-        //Debug.Log("nombre del displayname es: " + PlayerPrefs.GetString(PlayFabConstants.SavedUsername, ""));
-
+        displayNamePlayer.text = "Bienvenido: " + PlayerPrefs.GetString("displayName");
+        //displayNamePlayer.text = "Bienvenido: " + PlayFabConstants.displayName;
+        Debug.Log("Bienvenido: " + PlayerPrefs.GetString("displayName"));
+        Debug.Log("Bienvenido2: " + PlayerPrefs.GetString("displayName2"));
         //ProgressBar
 
         currentScene = SceneManager.GetActiveScene().buildIndex;
