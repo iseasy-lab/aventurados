@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -14,12 +15,13 @@ public class HUD : MonoBehaviour
 
     //Progressbar del tiempo
     [SerializeField] private Slider progressBar;
+    [SerializeField] private TextMeshProUGUI maxTime;
 
     private int currentScene;
 
     private float currentTime = -1;
 
-    [FormerlySerializedAs("Puntos")] public TextMeshProUGUI puntos;
+    [SerializeField] public TextMeshProUGUI puntos;
 
     //Impresion del nombre de usuario
     [SerializeField] private TextMeshProUGUI displayNamePlayer;
@@ -38,20 +40,22 @@ public class HUD : MonoBehaviour
     //Menu de reporte
     [SerializeField] private GameObject menuReport;
     [SerializeField] private TextMeshProUGUI stepCounter;
+    [SerializeField] private TextMeshProUGUI userName;
+    [SerializeField] private TextMeshProUGUI timer;
 
     private void Start()
     {
         Time.timeScale = 1f;
         GameManager.auxUpdatePoints = 0;
         gameManager = GameManager.Instance;
-        displayNamePlayer.text = "Bienvenido: " + PlayerPrefs.GetString("displayName");
+        //displayNamePlayer.text = "Bienvenido: " + PlayerPrefs.GetString("displayName");
+        displayNamePlayer.text = "Bienvenido " + PlayerPrefs.GetString("displayName2");
         //displayNamePlayer.text = "Bienvenido: " + PlayFabConstants.displayName;
         Debug.Log("Bienvenido: " + PlayerPrefs.GetString("displayName"));
         Debug.Log("Bienvenido2: " + PlayerPrefs.GetString("displayName2"));
-        //ProgressBar
 
         currentScene = SceneManager.GetActiveScene().buildIndex;
-
+        
         //Seleccion de personaje
         index = PlayerPrefs.GetInt("IndexPlayer");
 
@@ -73,6 +77,8 @@ public class HUD : MonoBehaviour
         if (currentScene == 6)
         {
             currentTime = Options.GlobalVar.currentTime;
+            maxTime.text = (Options.GlobalVar.currentTime/60).ToString();
+            Debug.Log("tiempo del niveel: " + maxTime);
             progressBar.maxValue = currentTime;
         }
     }
@@ -92,6 +98,8 @@ public class HUD : MonoBehaviour
             gameManager.GameOver();
             Time.timeScale = 0f;
             menuReport.SetActive(true);
+            userName.text = PlayerPrefs.GetString("displayName2");
+            timer.text = (Options.GlobalVar.currentTime/60).ToString();
             stepCounter.text = Reports.Reports.StepCounter.ToString();
         }
 
@@ -105,6 +113,8 @@ public class HUD : MonoBehaviour
     {
         puntos.text = puntosTotales.ToString();
     }
+
+    #region Botones
 
     public void Pause()
     {
@@ -127,6 +137,8 @@ public class HUD : MonoBehaviour
         SceneManager.LoadScene(3);
         Time.timeScale = 1f;
     }
+
+    #endregion
 
     private void ChangeScene()
     {

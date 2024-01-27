@@ -4,428 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa7f41d3-cd9d-4345-a1d0-2eee289cc06f" name="Changes" comment="Feat: Incorporación de musica en todo el videojuego&#10;Feat: Se añade interfaces para manejo de errores en LoginScene&#10;Fix: DisplayName en MainMenu funciona correctamente&#10;Fix: Se arregló la actualizacion de los puntos que obtiene el usuario en el juego hacia la bdd&#10;Fix: el conteo general de los pasos se mejoró">
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/btnSelect.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Bee/Player6914481e.dag.outputdata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Bee/Player6914481e.dag.payloads" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level2.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level4.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level5.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level6.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level7.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level8.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets2.assets.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets3.assets.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets4.assets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets4.assets.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets5.assets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets6.assets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets6.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets8.assets.resS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/00ba8c8dab94f2db81e487cd6aecdd1c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/016f1c30b15767fca2fcaaf35432fb59.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/019854d0abd3f5bcc44de710d12f693f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/03828a2fae2ae20c0ba5400d879047af.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/040a2a734121ef954d2bbe85041ce521.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0472f0e26b87ea1b7f32b004ddb1c787.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0483bf373572525598cd37d6066481a2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/067e743a4102f296fd1d837212d7a2c8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/06a42dcfb20f34ea331c92ca53c05f5c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/06f1377630b477638b541617ebaf716f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/072f3d5466f071d5c8f002950ff459bd.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0787b608cdd97528d6e4abd2185f83ce.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/08555531355f317d3788ce91dc3d050a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0a26d7941aebee4810bd089b324f02a5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0a81ace202dadcf0d71f1c24d92bfe68.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0cbfe123c572dce65150fbd11167ea63.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0dcdcd56bddbcf9ef8174e7bd4bab42f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/0ebcf1d247c96c6e461facf95ce17801.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/11c4ac0cee70aa56b43e065249b3e36a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/14dcea55301893ae9caae4324e1a273c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/15868e723b46e660c0242990d075f08c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/15c1d4e90754ffde68523c63ee89800a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/1adbc3d97885fc186a551dacec931ff5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/1b04b11ed6e04ae4656de4c0121104c8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/1e87c02fd26d8b62278d2f5fea340558.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/1f937ce3df29b353b0d4790010e4a588.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/20bbf8f3db6e2b5d7c26046cf0414c3b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/216d65548702c9847f6614db82cc5104.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/229d65e32480dbb46e09f26a81a6b75a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2349582eeae88b6ff53cf2a3315f260b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/23517adce2449d6b5ba15dbf60acbe0b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/23d51a9835f5fc82d1b8578668e9a560.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2413e190a66033b5d8432f121f10adbb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/25fdd34f485674d5a7cd326f1b4ac0e7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/27436b17346dd1fde15f1d55681174da.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/27f184f0bd9c552f99693a57bf1be79a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/28c001c2ffdda19dc6d3dde0d237a5c4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/28e87c7bdbb7c503edb86ab3d34a69ae.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2c98c1be72afac305123b5bb2a3014bb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2cb16fa892e3002015c61a9149d16bee.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2d4b23d9d42e344d22e0a762f0065da9.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2e6a234eeb45c07af00d2b2d0df2359f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2e78e46c9e2f7d0fe8fcf86655447ef6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2fde81b4723a082dcf160dc8742e4327.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2fe8c34bd7cdf4254b64bcad1b399fa1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/2ff2822735a8992c7ab10d6825f092ff.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/317ee2fabaf84ca955a1dd6aee5bd700.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3205175dbc909bffa73163641c1a4bec.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3406c17d674e3009157c6d6e269d3e84.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3594c053c60d75d8f309f2c794af5b3b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/368900e907048b8d3a597366110607f6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/37e5ba887b50028514be75ecaf0a2a8c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3a84dbabbffc0c9d40bc88dfbd7f4b5d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3baa4fe806e239dd37b23d4eb753720d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3dc49b56e44bc8f6ab97074b2e185c26.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3df608f4a2c3f2a269d65246acec01b1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/3eff6e47d343f9cba87a107fe7778ecf.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/40a044303e2c8e917c24733143e97001.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/41f5e703ab8d5f003df80aaa0ad2f034.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/428675249f6447cce7376454af8d0157.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/42889efb58bc8b7c272a42e0b8433239.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/4337a2cf69b5d3a329459a3e392193fa.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/439f57dc998233e0e60e19adc34b7c04.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/44f4f30bad67308768d54edf176417af.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/470ba37fe89d74f886c0f2fbbf78552e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/47a4f5f983a92dbd5e5be973a942a14d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/4989ea15fede5478718102a9e9018693.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/49c33b2387a29a6c8162922e73449041.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/4a096b31676fe514022f6389c41440e7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/4a183e4d0ef0a7384eb2e2eb2b0e4c8b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/4bb6d8adf10075a33d3bc2ae1f8a5fca.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/4e8eeaecd1b8491fe86f30fa127fbcdc.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/519d46fa6f73233614c306146a0ec5ee.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/51cfe34082396802eb5730ec847b2ea1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/51e3e193a5dedb9b4dfea7b1379bbb79.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5325183698638f1b7ce374f3f141c960.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/53550ef0f52b7ac19c40b4f2665a068f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/547f97de639658099e40165941361528.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/582bc3b855dba7185a08adac03a33141.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5a81bf99c9ebc9d25b1e71ff24088584.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5c140936dffa3899b691092e7f85d2c0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5cd8bc6e215131351d94ba0681dd034b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5df4a276a87cd75f1d4dfcf9cabad22d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5e6bfbacc77551706af5ac9cdca85d78.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5ebc458d5e17e0703b7d4ddfd44eb536.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5ee66d14ed1db490987018314c76bd75.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/5f6581c5a391cb02a5676e2a41c0bbfa.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/608b93d95c495462161d5b7160b60cc3.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/6132f7282f6946a7a9e2776266bbf1b8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/62c189fb2abfceea0181e169cf85fa60.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/62c892590edaf223ec53f2a32668ae23.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/63037d94912da339710b4bccece510ff.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/63605c884d66d1b15e519a317653c23e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/66c9ab9a3ca173c7e9f83542fe6c443a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/67b895745a98a7a8d6c6b92a11ce3dec.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/68297263c0739eb906f50ae6951f0844.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/68566f1e08ead4f1e51b09f9f38d82e7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/68895d34bb0e8537ab0d80444749644c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/689ca2dddeff6a92c2f77adbcb621622.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/6afd83aaec1834137a5b1e76aadc3c4b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/6b7f91434860f15e0fc4c65a1654d7b3.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/6fe5ef31e1ea66108de7cd72dde99a3c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/6ffc9031b5b87e920171b71ec2911fca.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/6ffd23415d911e0e17eaa85c45d0ee92.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/715f36cd0552d541e58112ffe5553cb5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/72703b2287d41b4fedc0deaa7d1d67fc.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7373f99a1784092e3b3d4e00c2f1ebd4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/73eec8ff4f087ddc78c20e6e1676cf9e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/74394bd4c0d945413c967c918250dc6a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/74fc1b9536386d612b0837406c28a51a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/75293b159fc33c6a0da87e0c9ebf0a16.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/75c95c060729ca736b9383b703509b41.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/78342b79da78ae4dc82c1b20139afe84.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/79504c02c1912461e1c67c2bfb25c66c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7b7b7503c1120bf083d66a988bb96e15.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7bc49773f90bb4309bd8438943dc0cca.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7bf31df3cbd9fa283e7b727cdcb55b53.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7c098858e587de376829f2d8d2243ff8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7c0bdab19c2427284a3910fc2d15e92a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7c62aef0a4b08005489c4db9f6b956ff.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7d1c5d312e6bfe385f6ca09a2c6788c2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7d4f7083a0971b1893e4b985897a3162.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7f626b214ef4334491b7b5d6116a96b8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7f747df904b5ed55de62a692a1c0d39e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/7fbc57a4379129a11058fbb2a79dc7f5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/812ba0aff2e94227b249d5de65dd9c2e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/82d4645e013e03fbb6bfe12c3704d5a9.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/82d4cc1ede596e1aa53fc9e695a3b155.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/83ab9f097cf061be08c2de4488b409ff.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/83e7b0ae6fdb305add5ad433a3446c16.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/83f6de4191e43338ad39892aed585b47.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/862a8efd93a532ff6d7de6f20b98b6ec.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/869e4847904847252b05ebe378b23f31.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/86b9a80fb8fdfef41ca136e0b477f6a2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/877cfcc1585c36cc498ce34d22734826.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/8904f012c6f2aaf476d1ceb8ccb1a6c8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/89a101849bf5f15b29754c7f50d30b7e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/8e6f8bd581af1eb4364d6f871eaf016e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/8f3649951b08dd386767a5b4a1f2af8a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/8f96854d0c688f13f9f3d81f5b92f41d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/8ffbbf9faead564a92da4691b100a4e2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/93009729218e613ffca3566524bc3f98.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/94ffe0ed0544394eec39ae793845e017.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/955acf28d92ddedec6206b4b958cce35.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/95b00b22afdc8b2ef0a4d7d088040c14.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/9622caba0c6e296f05babed7a12a9c8e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/978ff31095e5b0f8b7f741c2c3de77a1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/98e6f4401148e3b733ddf536c1fc8bad.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/99151e5df591cf171ad5c8a354c4d11d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/99661ea8aa7c14672a1750388ef18b54.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/9c0db46fc6136a1b47c790af0027bbde.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/9c80f92687cf25034d0af62776d41cf9.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/9cfabf314710f000dc4d138b2dfdc7d6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/9e123e9ccf34534392316a9b66576b98.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a0839f80ff3a383762ec2627ab6548d0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a0c616dea9ee6be73fb73e5bd4ab1ca0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a0e8d26de5d8dc9e635b84ec5862ddc4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a2bf8cdb32ddbc15a5fdf75f5656cf1e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a48a695f73cb6b23d29b0851e4499271.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a49f8c333a28da31d3c1bc6c759c4c48.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a5179d3358bfd92262a01ff77a221f05.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a5772ed91845855dad88d84f9fce52f5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a6b67dc119f214277e1510b929b76eea.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a7a43326ae073e22cd164a266f56922d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a7f1e982294f72496a116aaafb0e6af4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a823c6270c86127bf9335b145cafab47.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a8c045fd75c0b9aa38968fbb203caeca.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/a8e8bbc9d6f76a2b3368d779e218200d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/aabb990f9c0cd2104198420298b0d444.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/ab7fb149ef9c0a52166e63959176772c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/aeb0f0b90b29bf017ff23820dbd81d24.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/aec19ed0c19e18b8675bb49d4295f500.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/aecd6551c7e4ed30fc1cbf84a6e64b7c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/aed0766ce38467e6379eba8e1d5ea193.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/afa02da4c0da471bd20bf50e99ca8aac.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/afb721798f2a1b459d92c58af0e4a1ac.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b11825ce1e23b1a4f44d0d2ab0176dfc.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b14c27a5e57eab40d0fdd47b864f0ecb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b1afb04fcf3fca1bda0a04e6661f3b89.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b3f9304696ab85df22b9fa464afca529.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b60f1610d02f987b232e756d19d7f9a6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b76a8cc9da10708901f57f09a65f43e6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/b7dba0b8dc8b0d6a44cab2bfc74d8439.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/ba771776c5c92b460bbcbbeae0256f3a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/bb41d293c7547156cc6031d194caa95f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/bbb6b71895e5436fa00e1cddc0050d42.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/bc643b80e2cb6f381c4541c213277df5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/beeb6a777aaea4fe7301462a11ac3390.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/bfaf7452abce9e176d5b56be7ef971e8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c07d8fe79ddfe1c8e9499977cf4c994d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c090feb1d83bf30eeb642c18b2c462d5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c1b4c0d1f0b51e8e119eb5b5b0c06151.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c1bbeaaf2c6a4b99dadb7364c14e0c4e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c3712a44dca5984a734ef9c4ec5cfbab.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c4ccff8da350150e1e690ae882ca9c08.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c52384352013fdd8436111b968a760f1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c55947a0cedee98f73444ba389141074.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c5ea58b5991751f643d5d97e03f3e6a6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c64505b6ee93de34d659ab9a05b3d356.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c6a5738bcf6a12e814016b6c473b68dd.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c7a9d8da7c8df0682caea927c6b8789b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c84d36a941d5cdc1cb6093fbbc9e060d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c8b5ab43753afeefc5b232f763520514.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/c944fa9478914be9dabef949abba4cd4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/ca2b2e29262268acb9d9cca5f5380c41.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/cbf47e96b33d3815e0a797175a95394d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/cc36278270ddf9b580f4d027ccc67d6c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/cd376af26a7458da1b5d174d040cd72f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/cdb3ccd9345d2b27e5b3e41ff0d958fb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/ceffff43aa90cce29142c00b1d6b147a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d0c6020e05a65f6b4f57f748c22a6529.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d1289b3b7ac1254739fc8d39815924ef.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d1bb15a26a58f33a18f2d0b3c960182d.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d1bf7e7262649dd9cf6f0aa807f2b60c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d321521413ad194a7f586050949e6665.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d445cdb30a42bef7ce12a91bebf93d59.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d4823957ef18f6dbc22d9e48cfc28f11.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d520ec6409e86ea650d693b34477bcca.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d69a6df824b2b51161551784ea3da95a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d781e7b4f3eb468a16b735973badc8ed.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d788fb62683b1069d7db48dd34320784.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d7d61873f500c5f838f452374241bde7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/d83c5a0d82939f86b6dcd650d953e623.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/dae9f6877efe6b1d071387324458c3e0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/db0404953342f9612dc6e73493f57d22.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/db0a8ac367d6d57ffa01b94c1ef833ce.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/dc331c5fcca00e7d7de63e275fb8a0a1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/dcb01925c60bf59da079890931cc976f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/deef1f129d4ccdf787075f89ab72200f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/df6f8c39a16dfe010bc98a403e97fa8a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/e04d1df4741d6903e02eb03fb765bfe4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/e36f21656a99c08ebb3b96b30a4ca26f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/e38cb62f2ac300b91c1c091614891a4f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/e7d61374a58529d5c8eca9d94e0c7138.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/e993e34d5f17b0373aef93d63733b003.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/eb359ced8cdc6a0cc27e7a3b562df775.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/ee8d21e71e663e8b7acc83d05c066bb9.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/eecc82158ca71b18a92d24a3c0e5f21a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f0b185f32fd1b7683f3904cc8fdb5d36.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f262fc96c0a5d2a696ab906d7e67e30b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f3939d8e7a9e74ed3c8602c38db1ca84.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f42d542b3ae2532cd47e93e492dce041.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f4a4b67109c0f6a7ea01af8ce5ce10b5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f4b5fadf6cdbb71fc1bc391846760774.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f6077574dc3d31b287a6bcede65d5753.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f62379f07ab8c11e398376f7b1c7d349.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f9a6b507a911fef691a12fedfb5d3970.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f9e04ce6e5f04a6d7e15e4e7a6c533ee.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/f9e1a1832ae042c8378a3322cb0d490e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/fabac5e5b7e2c7bd54eb428220b265eb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/fb6aa233bc28e4df398f949045527868.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/fbe4847ba68769abe0623495ec9f03fa.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/fdf54682aaebb869b736cd8775bec439.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/fe270a2f7e7cdd8fe95ff17201a048fc.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/fec9856af9fefefc2df4620c2c4a39b1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/builtin/unity_builtin_extra0000/00/ffad10be6d266307a11e862a458496df.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Maskingbc1e/00/38ba5eadbd983f06ceb6bc533d93bc26.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Maskingbc1e/00/688d43891782f9c8c5eb8cf86ac4f556.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Maskingbc1e/00/a52ec028f0727eccf5e52cc09fb3268b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Overlaya02a/00/02aceda4019e3d8443c04545c95c1536.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Overlaya02a/00/3992175fa32bd5a6b1598762156f322c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Overlaya02a/00/6177f58f984d0890b5c7ff50e850daaa.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobile Overlaya02a/00/acd62882349e23637005502742774d41.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/17e27a8fc3ad05b55832c753e8a3361e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/1b83d73bd4f4b9aa61d9bf020c1e46c4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/1df1dc8e553405da2b531a93e8b1f7e4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/22059e4e24c8c6915874755a8fc914e8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/248e5910281267593a03fb9b488131e5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/25be1d6d63497b48564ed7b86f4bf57f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/35d42a744ab46e64076d39415cbb2d13.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/45685a333886dba1ff9fc1229cdd12df.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/57c1e223a37a754dd770eb4448d44874.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/653fe4611db4e3606c9e60ea7205bf77.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/6bf53754c5ffcf76645fcda21fbfef7e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/c9b17c22d909d333981ff4fcc9c5803a.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/f4deacb35b8782d46097de0f307bd223.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/f9e36d47f850feba74f5958e32864c0c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/fc02ba91cd8a76faf6d6c1748fe3d69c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Mobilefe39/00/fc0964caa84e76de341bba195413c890.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/15f756e93345cec5df8c4897eb4ad87e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/23c44514d6aac5cb836dcb7eaf3eccd4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/25a2946193ed09b2942abd8e9c1cd675.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/47abfb50fad936e26e7560c364e841b8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/6a14a680a7d4501cf089778b50bd86a3.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/b1618db96df727f6b84b034a0adb1794.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surface-Mobile8518/00/b8e77a0b98691a691bbfa3e54c7818c4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/0915560b810d6dce4be5bf0a9722b23b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/2b15e2f98f1c2b9cad61d50459483075.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/35ec04517658753230ffb2ac43470fc2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/3c9d2c995f96e2967d9aeacff88556c6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/44c54fafbf34ae4e0885f963654169a2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/6afe1084febcd6c844f39c88f8e9b0d7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/7191a21e9cab13f8493ea4487a0f279b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/79dce38b23e286f94294fd4fdaba351e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/7cc2ad33e373e2027e2f5b1b468518d8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/8fe7c26c0d2739d4c763afbf36463193.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/a02fdcaa6150a6faf1a094b41af8471f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/a0e8326339648f46d7b1cf4fbb991bf0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/ad472afc9dbfe261bfc7f52ae7276303.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/ae8ce20bf621e43368f9318890e70b26.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/ba0179241f8455a32bdc9d38e8bc927e.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/d6c9e27d584875b82c5eb321bcc209fb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/ec95b25d6543f870528b07b3f319784c.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF-Surfacef7ad/00/ffd0a05581abd8e9f8fe8988306846d4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/04ce69055c3d3ecaaf5950856d4920bc.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/10243ae4ec4ef570f652c40b6d7444c6.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/19a81fdc6489e62252e738de974e716b.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/1eef7b0418012d64378a0528aaf5be07.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/3324dac52ddca64bd8edb10ce9554cf5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/4494edee7e4f9298840eae0763ed4a44.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/6d699ccc063d6fb4be06f70e144023fb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/88989a0a9d7077907236a2552c2cbb48.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/9b0706fba60543b4e7ef66513197506f.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/9e0b86a3291d9c550714c16861e0ccdb.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/a1b53e6880b30d907cec0ef21f9a2dd0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/a36ea510b9a334b6d8d94d362e0ca4d4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/aefa76daab6f568ac512ad9d71c50153.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_SDF68e6/00/c421062daacc45083c3b29228c8ae1e8.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_Spritecf81/00/25919d1b31089a5ce516dc1b172ab6d1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_Spritecf81/00/7df6a62cb5be64f4e035650121457b48.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_Spritecf81/00/987b93fc7c9cf9d8a6202e0263fdbe26.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/shader/TMP_Spritecf81/00/b22b0d87aada77b76c4944db088c7227.bin" afterDir="false" />
+    <list default="true" id="aa7f41d3-cd9d-4345-a1d0-2eee289cc06f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototipo_Tesis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototipo_Tesis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Materials/GrassSimple.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Materials/Ground.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Materials/Pole.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Materials/Tree.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Meshes/AttackDummy.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Meshes/AttackDummy.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Meshes/Grass.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Meshes/Tree.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Shaders/GrassAnimate.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Textures/T_Grass.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Textures/T_Pole.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/DemoAssets/Textures/Tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EgyptMonsters/Demo/Eagle_Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshtint Free Car 01 Mega Toon Series/READ ME/Meshtint Mega Toon Series Read Me .pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshtint Free Car 01 Mega Toon Series/Scenes/Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/demo_Scenes/demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/number_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/symbols/symbol_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/level.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/music.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/quit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/score.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/sfx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/texts/text_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPG&amp;Fantasy Mobile GUI/titles/title_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backgrounds/FondoAguila.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backgrounds/FondoAguila.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/EscenaJuego.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EscenaJuego.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
@@ -438,30 +22,35 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlobalButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GlobalButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/EmailLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/EmailLogin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/GuestLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/GuestLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/Leaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/Leaderboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/PlayFabGetLeaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard/PlayFabGetLeaderboard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Login/PlayfabLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Login/PlayfabLogin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptMovimiento.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptMovimiento.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/btnNextSceneChar.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/btnBeep.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/btnBeep.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/btnSelect.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/btnSelect.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/btnclose.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/btnclose.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/button-124476.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/button-124476.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/changeScene.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/changeScene.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/click-button-140881.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/click-button-140881.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/collectable.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/collectable.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/stay-retro-124958.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundSource/stay-retro-124958.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.payloads" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.payloads" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_derived" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbgSkipCompile.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbgSkipCompile.dag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbgSkipCompile.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbgSkipCompile.dag_derived" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag.outputdata" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag.outputdata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag.payloads" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag.payloads" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag_derived" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aP.dag_fsmtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player6914481e.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/Player6914481e.dag_fsmtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" afterDir="false" />
@@ -477,32 +66,49 @@
       <change beforePath="$PROJECT_DIR$/Library/BuildPlayerData/Editor/TypeDb-All.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BuildPlayerData/Editor/TypeDb-All.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/BuildPlayerData/Player/TypeDb-All.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BuildPlayerData/Player/TypeDb-All.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/ScriptingAssemblies.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/ScriptingAssemblies.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/boot.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level4" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level8" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/resources.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets2.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets2.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets3.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets3.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets3.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets3.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets4.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets4.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets4.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets4.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets5.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets5.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets6.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets6.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets7.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets7.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets8.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets8.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/DataBuildDirtyInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/DataBuildDirtyInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/ScriptsOnlyCache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/ScriptsOnlyCache.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptMapper" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptMapper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/PrefabStageHierarchy/80/8083b3abf0712c9aa835df46b87cf9f3.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/PrefabStageHierarchy/80/8083b3abf0712c9aa835df46b87cf9f3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/63/63cf2eb2f1b9db6bb4199a249405f336.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/63/63cf2eb2f1b9db6bb4199a249405f336.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/ab/ab8ff5e8a33fd62a160a1e7434c57a0b.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/ab/ab8ff5e8a33fd62a160a1e7434c57a0b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/UIElements/EditorWindows/UnityEditor.InspectorWindow.pref" beforeDir="false" afterPath="$PROJECT_DIR$/Library/UIElements/EditorWindows/UnityEditor.InspectorWindow.pref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ilpp.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -546,6 +152,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Options/GlobalVar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundEntry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/PopUpManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -583,7 +190,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Player.Unity.exe (Prototipo_Tesis)">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../PrototipoV3\PrototipoV3_Aventurados.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../PrototipoV3/PrototipoV3_Aventurados.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\Tesis\PrototipoV2" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -752,7 +359,9 @@
       <workItem from="1705631730360" duration="10094000" />
       <workItem from="1705702119407" duration="5235000" />
       <workItem from="1705795716384" duration="4251000" />
-      <workItem from="1705879219763" duration="9720000" />
+      <workItem from="1705879219763" duration="9859000" />
+      <workItem from="1705925845976" duration="9528000" />
+      <workItem from="1706016043226" duration="14690000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: mejoramiento de la capacidad de detectar movimiento de objetos de color rojo">
       <option name="closed" value="true" />
@@ -882,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705814815948</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Feat: Incorporación de musica en todo el videojuego&#10;Feat: Se añade interfaces para manejo de errores en LoginScene&#10;Fix: DisplayName en MainMenu funciona correctamente&#10;Fix: Se arregló la actualizacion de los puntos que obtiene el usuario en el juego hacia la bdd&#10;Fix: el conteo general de los pasos se mejoró">
+      <option name="closed" value="true" />
+      <created>1705897525264</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705897525264</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     private void OnGetUserDataSuccess(GetUserDataResult result)
     {
-        Debug.Log("Id: " + playerId);
+        Debug.Log("Id: " + result);
     }
 
     private void OnGetUserDataFailure(PlayFabError error)
@@ -75,21 +75,6 @@ public class GameManager : MonoBehaviour
         puntosTotales += puntosSumar;
         //Debug.Log(puntosTotales);
         hud.ActualizarPuntos(puntosTotales);
-    }
-
-    public void PasarNivel(int nivel)
-    {
-        if (puntosTotales > 2000000)
-        {
-            Debug.Log("Pasar Nivel");
-            SceneManager.LoadScene(nivel);
-        }
-    }
-
-    public void SeleccionNivel(int nivel)
-    {
-        Debug.Log("Nivel seleccionado");
-        SceneManager.LoadScene(nivel);
     }
 
     public void GameOver()

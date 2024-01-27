@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SoundEntry : MonoBehaviour
 {
-    private SoundEntry instance;
+    public static SoundEntry instance;
+    public static AudioSource musicSource;
     
     public SoundEntry Instance
     {
@@ -19,8 +20,11 @@ public class SoundEntry : MonoBehaviour
         }
     }
 
+    
+
     private void Awake()
     {
+        musicSource = GetComponent<AudioSource>();
         if(FindObjectsOfType(GetType()).Length > 1)
         {
             Destroy(gameObject);
@@ -37,6 +41,16 @@ public class SoundEntry : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-
+/*
+    public void PauseMusic()
+    {
+        musicSource.Pause();
+    }
+    
+    public void PlayMusic()
+    {
+        musicSource.UnPause();
+    }
+*/
     
 }

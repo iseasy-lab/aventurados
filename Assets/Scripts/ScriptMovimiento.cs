@@ -71,20 +71,21 @@ public class NewBehaviourScript : MonoBehaviour
     //int framesMovimientoDetectado = 0;
 
     //Buffer historico de frames
-    private const int BufferSize = 8;
+    //private const int BufferSize = 12;    //Funciona bien con 12
+    private const int BufferSize = 30;
     bool[] moveBuffer = new bool[BufferSize];
     int bufferIndex;
-    
+
     //Contador de Pasos
     public Reports.Reports reports;
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
         velocidadPositiva = PlayerPrefs.GetFloat("velocidadPositiva", 6f);
         velocidadNegativa = PlayerPrefs.GetFloat("velocidadNegativa", 0f);
-        
+
         reports = new Reports.Reports();
 
         rb = GetComponent<Rigidbody>();
@@ -110,14 +111,14 @@ public class NewBehaviourScript : MonoBehaviour
         //Debug.Log("la dificultad esta con velpos " + velocidadPositiva + " con velneg " + velocidadNegativa);
         Cv2.ImShow("Color Detection", frame);
         rb.velocity = Vector3.zero;
-        
+
         //Detectar movimiento instantaneo
         bool instantMove = hayMovimientoRapidoRojo;
-        
+
         //Almacenar en buffer
         moveBuffer[bufferIndex] = instantMove;
         bufferIndex = (bufferIndex + 1) % BufferSize;
-        
+
         //Analizar buffer
         bool trueMovement = BufferAnalyze(moveBuffer);
 
@@ -154,8 +155,6 @@ public class NewBehaviourScript : MonoBehaviour
         */
         if (Time.timeScale != 0)
         {
-
-
             switch (estadoActual)
             {
                 case EstadoMovimiento.Reposo:
@@ -186,7 +185,6 @@ public class NewBehaviourScript : MonoBehaviour
                     }
 
                     break;
-
             }
         }
 
@@ -195,6 +193,8 @@ public class NewBehaviourScript : MonoBehaviour
 
         //rb.velocity = Velocidad * (Input.GetAxis("Horizontal") * Vector3.right + Input.GetAxis("Vertical") * Vector3.forward);
     }
+
+    #region Deteccion de Movimiento
 
     async Task<Mat> GetFrameAsync()
     {
@@ -293,6 +293,8 @@ public class NewBehaviourScript : MonoBehaviour
         return redMask;
     }
 
+    #endregion
+
     //Funcion para analizar el buffer
     bool BufferAnalyze(bool[] buffer)
     {
@@ -307,7 +309,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         return trueCount > ((BufferSize / 2) - 1);
     }
-    
+
 
     void OnDestroy()
     {

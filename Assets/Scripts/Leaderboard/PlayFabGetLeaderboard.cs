@@ -30,11 +30,13 @@ namespace Leaderboard
         {
             var leaderboard = new StringBuilder();
             // Formato de alineación con 10 caracteres de espacio y alineación a la izquierda
-            string formato = "{0,10}{1,35}{2,18}";
+            //string format = "{0,10} | {1,-35} | {2,18}";
+            //string format = "{0,10}{1,30}{2,18}";
+            string format = "{0,8}{1}{2}";
             foreach (var playerLeaderboardEntry in response.Leaderboard)
             {
-                //leaderboard.AppendLine($"{playerLeaderboardEntry.Position + 1}.                      {playerLeaderboardEntry.DisplayName}                           {playerLeaderboardEntry.StatValue}");
-                leaderboard.AppendLine(String.Format(formato, playerLeaderboardEntry.Position + 1, playerLeaderboardEntry.DisplayName, playerLeaderboardEntry.StatValue));
+                leaderboard.AppendLine($"{playerLeaderboardEntry.Position + 1}.                      {playerLeaderboardEntry.DisplayName}                           {playerLeaderboardEntry.StatValue}");
+                //leaderboard.AppendLine(String.Format(format, (playerLeaderboardEntry.Position + 1).ToString().PadLeft(10), (playerLeaderboardEntry.DisplayName).PadRight(30), (playerLeaderboardEntry.StatValue).ToString().PadLeft(18)));
 
             }
 

@@ -16,7 +16,7 @@ namespace Login
         [SerializeField] private GameObject loginPanel;
         [SerializeField] private GameObject registerPanel;
         [SerializeField] private GameObject resetPasswordPanel;
-
+        //Manejo de Errores
         [SerializeField] private GameObject errorMessagePanel;
         [SerializeField] private TextMeshProUGUI txtError;
         [SerializeField] private TextMeshProUGUI txtErrorTitle;
@@ -30,8 +30,9 @@ namespace Login
             Application.targetFrameRate = 30;
 
             //Filling login credentials based on local saves
-            loginUi.username.text = PlayerPrefs.GetString(PlayFabConstants.SavedUsername, "");
-
+            //loginUi.username.text = PlayerPrefs.GetString(PlayFabConstants.SavedUsername, "");
+            //loginUi.username.text = PlayerPrefs.GetString("displayName3", "");
+            
             if (PlayFabClientAPI.IsClientLoggedIn())
             {
                 Debug.LogWarning("Usuario logeado");
@@ -167,6 +168,7 @@ namespace Login
                 Email = registerUi.email.text,
                 Password = registerUi.password.text,
                 Username = registerUi.username.text,
+                DisplayName = registerUi.username.text,
                 InfoRequestParameters = loginInfoParams,
             };
 
@@ -225,10 +227,11 @@ namespace Login
             PlayerPrefs.SetString("USERNAME", registerUi.username.text);
             //PlayerPrefs.SetString("DISPLAYNAME", registerUi.username.text);
             PlayerPrefs.SetString("PW", registerUi.password.text);
-            PlayerPrefs.SetString("displayName", registerUi.username.text);
+            //PlayerPrefs.SetString("displayName", registerUi.username.text);
             Debug.Log(result.PlayFabId);
             Debug.Log(result.Username);
-            //Debug.Log(result.DisplayName);
+            //PlayerPrefs.SetString("displayName", result.Username);
+            
             loginInProgress.SetActive(false);
             loginPanel.SetActive(true);
             registerPanel.SetActive(false);
@@ -249,15 +252,23 @@ namespace Login
         {
             Debug.Log("Login Success!");
             Debug.Log("identificador playfab: " + result.PlayFabId);
-
-            GetPlayerProfile(result.PlayFabId);
+            
             Debug.Log("nombre usuario playfab: --displayname--" + result.InfoResultPayload.PlayerProfile.DisplayName);
             Debug.Log("nombre usuario playfab: --username--" + result.InfoResultPayload.AccountInfo.Username);
-            PlayFabConstants.displayName = result.InfoResultPayload.AccountInfo.Username;
+            PlayFabConstants.displayName = result.InfoResultPayload.PlayerProfile.DisplayName;
+
+            if (result.InfoResultPayload.AccountInfo.Username == null)
+            {
+                PlayerPrefs.SetString("displayName2", "Invitado");
+            }
+            else
+            {
+                PlayerPrefs.SetString("displayName2", result.InfoResultPayload.PlayerProfile.DisplayName);
+            }
 
             PlayerPrefs.SetString(PlayFabConstants.SavedUsername, loginUi.username.text);
-            PlayerPrefs.SetString("displayName", loginUi.username.text);
-            PlayerPrefs.SetString("displayName2", result.InfoResultPayload.AccountInfo.Username);
+            //PlayerPrefs.SetString("displayName3", loginUi.username.text);
+            
             loginInProgress.SetActive(false);
 
             SceneManager.LoadScene(3);
@@ -287,54 +298,5 @@ namespace Login
             Debug.Log(error.GenerateErrorReport());
         }
 
-        public void GetPlayerProfile(string playFabId)
-        {
-            var request = new GetAccountInfoRequest()
-            {
-                PlayFabId = playFabId,
-            };
-            PlayFabClientAPI.GetAccountInfo(request, OnDisplaySuccess, OnDisplayError);
-        }
-
-        private void OnDisplaySuccess(GetAccountInfoResult result)
-        {
-            Debug.Log("The player's Username profile is: " + result.AccountInfo.Username);
-            if (result.AccountInfo.Username != null)
-            {
-                PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
-                    {
-                        DisplayName = result.AccountInfo.Username,
-                    },
-                    result =>
-                    {
-                        Debug.Log("The player's display name is now: " + result.DisplayName);
-                        PlayerPrefs.SetString("displayName", result.DisplayName);
-                        Debug.Log("The player's display name in PlatConstants: " + PlayFabConstants.displayName);
-                    },
-                    error => Debug.Log(error.GenerateErrorReport()));
-            }
-            else
-            {
-                //System.Random rnd = new System.Random();
-                PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
-                    {
-                        //DisplayName = "Jugador " + Random.Range(0, 1000).ToString(),
-                        
-                        DisplayName = "Jugador Invitado",
-                    }, 
-                    result =>
-                    {
-                        Debug.Log("The player's display name is now: " + result.DisplayName);
-                        PlayerPrefs.SetString("displayName", result.DisplayName);
-                    },
-                    error => Debug.Log(error.GenerateErrorReport()));
-            }
-            
-        }
-
-        private void OnDisplayError(PlayFabError error)
-        {
-            Debug.Log(error.GenerateErrorReport());
-        }
     }
 }

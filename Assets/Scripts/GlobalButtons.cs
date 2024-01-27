@@ -6,7 +6,8 @@ public class GlobalButtons : MonoBehaviour
 {
     //Pantalla de carga previa al nivel del juego
     [SerializeField] private GameObject loadInProgress;
-
+    //AudioSource soundEntry = SoundEntry.musicSource;
+    
     public void PulsarJugar()
     {
         Debug.Log("Ir a jugar");
@@ -75,5 +76,15 @@ public class GlobalButtons : MonoBehaviour
         Debug.Log("CerrandoSesion");
         PlayFab.PlayFabClientAPI.ForgetAllCredentials();
         SceneManager.LoadScene(2);
+    }
+
+    public void MusicPause()
+    {
+        SoundEntry.musicSource.Pause();
+    }
+    
+    public void MusicResume()
+    {
+        SoundEntry.musicSource.UnPause();
     }
 }
