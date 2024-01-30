@@ -22,8 +22,6 @@ ScriptsOnlyBuild:
     - Util.Rotator
     PlayFab:
     - PlayFabSharedSettings
-    PlayFab.dll:
-    - PlayFabSharedSettings
     PlayFabEditorExtensions.dll:
     - PlayFab.PfEditor.PlayFabEditor
     - PlayFab.PfEditor.PlayFabEditorPrefsSO
@@ -49,8 +47,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -127,21 +127,57 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: GlobalButtons
     methodName: PulsarJugar
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -184,9 +220,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -205,6 +250,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: UiController
     methodName: ToggleInputType
@@ -244,6 +292,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -265,6 +319,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GlobalButtons
     methodName: PulsarOpciones
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -298,6 +358,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -337,9 +400,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: GlobalButtons
     methodName: PulsarRegresar
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -352,6 +424,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: HUD
     methodName: PrevScene
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -397,12 +475,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: HUD
     methodName: RestartLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -418,6 +502,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -430,18 +520,27 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: Options.GlobalVar
     methodName: SetDifficultyHard
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicResume
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
@@ -466,12 +565,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GlobalButtons
     methodName: PulsarRegresar
+  - assembly: Assembly-CSharp
+    fullTypeName: GlobalButtons
+    methodName: MusicPause
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: Options.GlobalVar
     methodName: SetDifficultyEasy
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   sceneClasses:
     Assets/Scenes/EscenaJuego.unity:
     - Class: 1
@@ -532,6 +637,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3374}
     - Class: 114
       Script: {instanceID: 4216}
+    - Class: 114
+      Script: {instanceID: 4904}
     - Class: 114
       Script: {instanceID: 5592}
     - Class: 114
@@ -615,6 +722,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3026}
     - Class: 114
       Script: {instanceID: 3374}
+    - Class: 114
+      Script: {instanceID: 4904}
     - Class: 114
       Script: {instanceID: 5148}
     - Class: 114
@@ -933,6 +1042,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4216}
     - Class: 114
       Script: {instanceID: 4528}
+    - Class: 114
+      Script: {instanceID: 4904}
     - Class: 114
       Script: {instanceID: 5346}
     - Class: 114
@@ -2490,4 +2601,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/EscenaJuego.unity
   - Assets/Scenes/Leaderboard.unity
   - Assets/Scenes/Options.unity
-  playerPath: D:/Tesis/PrototipoV3/PrototipoV3_Aventurados.exe
+  playerPath: D:/Tesis/BetaGame/Beta_Aventurados.exe

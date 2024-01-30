@@ -17,9 +17,9 @@ public class ScriptMovFondo : MonoBehaviour
     void Update()
     {
         
-        if (transform.position.z <= -11)
+        if (transform.position.z <= -13)
         {
-            transform.position = ObjetoDebajo.transform.position + new Vector3(0, 0, 11);
+            transform.position = ObjetoDebajo.transform.position + new Vector3(0, 0, 13);
         }
         
         transform.position += new Vector3(0, 0, velocidad * Time.deltaTime);

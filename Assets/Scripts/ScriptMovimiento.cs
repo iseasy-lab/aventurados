@@ -2,12 +2,15 @@ using UnityEngine;
 using System;
 using OpenCvSharp;
 using System.Threading.Tasks;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Rigidbody))]
 public class NewBehaviourScript : MonoBehaviour
 {
     Rigidbody rb;
+
+    [SerializeField] public RawImage imageDisplay;
     //public float Velocidad = 8f;
 
     //Variables Globales
@@ -109,7 +112,7 @@ public class NewBehaviourScript : MonoBehaviour
         Mat frame = await GetFrameAsync();
         // Mostrar el resultado solo si hay movimiento y hay movimiento de color rojo o verde
         //Debug.Log("la dificultad esta con velpos " + velocidadPositiva + " con velneg " + velocidadNegativa);
-        Cv2.ImShow("Color Detection", frame);
+        //Cv2.ImShow("Color Detection", frame);
         rb.velocity = Vector3.zero;
 
         //Detectar movimiento instantaneo
@@ -232,10 +235,10 @@ public class NewBehaviourScript : MonoBehaviour
                 //Obtener una ROI para cada contorno de cada objeto rojo
                 OpenCvSharp.Rect roiRed = Cv2.BoundingRect(contour);
 
-                /*
+
                 //*******************************Impresion del texto en el frame, no se necesita para la mecánica*******************************
                 // Definir el texto del mensaje
-                string message = $"Se han detectado objetos de color ROJO que se mueven mucho";
+                string message = $"Se han detectado objetos de color ROJO";
                 // Definir la posición del mensaje
                 Point position = new Point(10, 30);
                 // Definir el color del mensaje
@@ -243,7 +246,7 @@ public class NewBehaviourScript : MonoBehaviour
                 // Definir la fuente del mensaje
                 HersheyFonts font = HersheyFonts.HersheySimplex;
                 // Definir el tamaño del mensaje
-                double size = 1.0;
+                double size = 1.5;
                 // Escribir el mensaje en el fotograma original
                 Cv2.PutText(frame, message, position, font, size, color);
                 //******************************************************************************************************************************
@@ -253,11 +256,10 @@ public class NewBehaviourScript : MonoBehaviour
                 // Definir el color de los contornos rojos
                 Scalar contourColorRed = Scalar.Red;
                 // Definir el grosor de los contornos
-                int contourThickness = 2;
+                int contourThickness = 3;
                 // Dibujar los contornos en el fotograma original
                 Cv2.DrawContours(frame, contoursRed, -1, contourColorRed, contourThickness);
                 //***************************************************************************************************************************************
-                */
 
 
                 // Calcular el centro del rectángulo actual
@@ -289,8 +291,10 @@ public class NewBehaviourScript : MonoBehaviour
                 prevCenterRed = centerRed;
             }
         }
-
-        return redMask;
+        Texture2D texture = OpenCvSharp.Unity.MatToTexture(frame);
+        imageDisplay.texture = texture;
+        //return redMask;
+        return frame;
     }
 
     #endregion

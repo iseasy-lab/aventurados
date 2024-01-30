@@ -522,6 +522,7 @@
      <Folder Include="Assets" />
      <Folder Include="Assets\Raptor3D\FA_N26\Textures" />
      <Folder Include="Assets\Blink\Art\Animals\Stylized\Demo_Animals\DemoData" />
+     <None Include="Assets\20 Logos PSD\Fonts\chunkfiveex\SIL Open Font License 1.1.txt" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Tracking" />
      <Folder Include="Assets\Scripts\ScenesPrefabs" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\ml" />
@@ -530,6 +531,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\Delegate" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\text" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\firasansheavy" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Sprites" />
      <Folder Include="Assets\EgyptMonsters\Models\Eagles\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\tracking\Enum" />
@@ -561,17 +563,20 @@
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Document_Scanner" />
      <Folder Include="Assets\ADI\Voxel Ships\Prefabs" />
+     <Folder Include="Assets\20 Logos PSD\PSD\Pattern" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Bretwalda Steam Locomotive" />
      <None Include="Assets\OpenCV+Unity\Documentation\Third-Party Licenses.txt" />
      <None Include="Assets\gmcs.rsp" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Plugins\Windows" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\peacesans" />
      <None Include="Assets\Quirky Series - Birds Bundle\_Shader\SoftSurface.shader" />
      <Folder Include="Assets\Blink\Art\Animals\Stylized\Demo_Animals" />
      <Folder Include="Assets\Imagenes\backgrounds\Car" />
      <Folder Include="Assets\EgyptMonsters" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\photo" />
+     <Folder Include="Assets\Cursors" />
      <Folder Include="Assets\CasualFantasy\_Demo\Mat" />
      <Folder Include="Assets\Cartoon Sports Car\prefabs" />
      <Folder Include="Assets\Stylized_Pirate_Ship" />
@@ -598,9 +603,11 @@
      <Folder Include="Assets\ADI\Voxel Ships" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\GhostCharacter_Free\Fbx" />
+     <Folder Include="Assets\20 Logos PSD" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\PSD" />
      <Folder Include="Assets\Quirky Series Ultimate\FREE\Textures" />
+     <Folder Include="Assets\Cursors\Cursors 256" />
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\icons" />
      <Folder Include="Assets\Bretwalda Steam Locomotive\Prefab" />
      <Folder Include="Assets\Blink\Art" />
@@ -623,6 +630,7 @@
      <Folder Include="Assets\Sailing Ships\Materials\WoodFineDark" />
      <Folder Include="Assets\OpenCV+Unity\Plugins\Windows\x86_64" />
      <Folder Include="Assets\Modelos\Starship\Low Poly Starship-SS01\3D" />
+     <Folder Include="Assets\SoundSource\VoiceSource" />
      <Folder Include="Assets\CasualFantasy\_Demo" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\face" />
      <None Include="Assets\OpenCV+Unity\gmcs.rsp" />
@@ -648,6 +656,7 @@
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\Animations" />
      <Folder Include="Assets\CasualFantasy\_Demo\Model" />
      <Folder Include="Assets\CasualFantasy" />
+     <Folder Include="Assets\Imagenes\backgrounds\City" />
      <Folder Include="Assets\Quirky Series Ultimate\FREE\Materials" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Struct" />
      <Folder Include="Assets\Fox\Animations" />
@@ -663,6 +672,7 @@
      <Folder Include="Assets\EgyptMonsters\Models\Eagles" />
      <Folder Include="Assets\CasualFantasy\Spider1\SourceFiles\Model" />
      <Folder Include="Assets\Raptor3D\FA_N26" />
+     <Folder Include="Assets\20 Logos PSD\Fonts" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\FBX" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\bgsegm" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series\PPP" />
@@ -685,6 +695,7 @@
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgproc\Enum" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\features2d\Enum" />
      <None Include="Assets\OpenCV+Unity\Documentation\OpenCV+Unity_Notes.txt" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\gilam" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\imgcodecs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -692,10 +703,13 @@
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Materials" />
      <Folder Include="Assets\Meshtint Free Car 01 Mega Toon Series" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\Imagenes\backgrounds\Mountain" />
      <Folder Include="Assets\Scripts\Sound" />
+     <Folder Include="Assets\Cursors\Cursors 64" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Models" />
      <Folder Include="Assets\CasualFantasy\Spider1\SourceFiles\Texture" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Face_Recognizer" />
+     <None Include="Assets\20 Logos PSD\Fonts\kaushanscript\SIL Open Font License.txt" />
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\ready_buttons" />
      <Folder Include="Assets\Sailing Ships\Materials\Bricks" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\shape" />
@@ -719,6 +733,7 @@
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\panels" />
      <Folder Include="Assets\Raptor3D\FA_N26\Textures\LOD5\0_Main" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\objdetect\Enum" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\foo" />
      <Folder Include="Assets\Sailing Ships\FBX" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\ml" />
      <Folder Include="Assets\Modelos\Planets\scene" />
@@ -742,19 +757,23 @@
      <Folder Include="Assets\EgyptMonsters\Effects\Eagles" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Document_Scanner\Resources" />
+     <Folder Include="Assets\20 Logos PSD\PSD" />
      <Folder Include="Assets\Quirky Series Ultimate\FREE" />
      <Folder Include="Assets\OpenCV+Unity\Demo\Lobby" />
      <Folder Include="Assets\Scripts\SceneLevel" />
      <None Include="Assets\OpenCV+Unity\Demo\Face_Recognizer\face-recognizer.xml" />
      <Folder Include="Assets\Bretwalda Steam Locomotive\Scene" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\calib3d\Enum" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\kaushanscript" />
      <Folder Include="Assets\Scripts\PlayerLevel" />
      <Folder Include="Assets\Sailing Ships\Materials\WoodPlanks" />
      <Folder Include="Assets\Sailing Ships\Materials\WoodPlanksWorn" />
      <Folder Include="Assets\Quirky Series Ultimate\FREE\Prefabs" />
      <Folder Include="Assets\Quirky Series Ultimate" />
+     <None Include="Assets\20 Logos PSD\Fonts\peacesans\FREE FONT LICENSE.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\RPG&amp;Fantasy Mobile GUI\buttons" />
+     <None Include="Assets\20 Logos PSD\Fonts\molot\molot-eula.txt" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\core\Enum" />
      <Folder Include="Assets\GhostCharacter_Free\Textures" />
      <Folder Include="Assets\GhostCharacter_Free\Prefabs" />
@@ -774,11 +793,14 @@
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
      <Folder Include="Assets\Quirky Series - Birds Bundle\_Animations\Shapekey" />
      <Folder Include="Assets\Raptor3D\FA_N26\Scenes" />
+     <Folder Include="Assets\20 Logos PSD\Background" />
      <Folder Include="Assets\Bretwalda Steam Locomotive\Model" />
      <Folder Include="Assets\Scripts\Login" />
      <Folder Include="Assets\Quirky Series Ultimate\FREE\Models" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Scenes" />
      <Folder Include="Assets\Imagenes\backgrounds\Eagle" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\molot" />
+     <None Include="Assets\20 Logos PSD\Fonts\Read Me.txt" />
      <Folder Include="Assets\Blink\Art\Animals\Stylized\Bear\Bear_Textures" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\stitching" />
      <Folder Include="Assets\Modelos\Planets\Materials" />
@@ -810,6 +832,7 @@
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules" />
      <None Include="Assets\smcs.rsp" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\objdetect" />
+     <Folder Include="Assets\Imagenes\backgrounds\Ocean" />
      <Folder Include="Assets\EgyptMonsters\Animations\Eagles" />
      <Folder Include="Assets\Sailing Ships" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\modules\face" />
@@ -825,6 +848,7 @@
      <Folder Include="Assets\OpenCV+Unity" />
      <Folder Include="Assets\Scripts" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <Folder Include="Assets\20 Logos PSD\PNG" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Textures" />
      <Folder Include="Assets\Raptor3D\FA_N26\Textures\LOD4" />
      <Folder Include="Assets\Modelos\Pixel Boxes - lowpoly\Animator" />
@@ -833,6 +857,7 @@
      <Folder Include="Assets\EgyptMonsters\Models" />
      <Folder Include="Assets\Blink" />
      <Folder Include="Assets\EgyptMonsters\Effects" />
+     <None Include="Assets\20 Logos PSD\Fonts\firasansheavy\SIL Open Font License.txt" />
      <Folder Include="Assets\OpenCV+Unity\Assets\Scripts\OpenCvSharp\PInvoke\imgproc" />
      <Folder Include="Assets\ADI" />
      <Folder Include="Assets\Imagenes\character" />
@@ -843,6 +868,7 @@
      <Folder Include="Assets\OpenCV+Unity\Demo" />
      <Folder Include="Assets\Sailing Ships\Materials\Stone" />
      <Folder Include="Assets\EgyptMonsters\Animators\Eagles" />
+     <Folder Include="Assets\20 Logos PSD\Fonts\chunkfiveex" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\ADI\Voxel Ships\Models" />
      <None Include="Assets\OpenCV+Unity\mcs.rsp" />
@@ -1545,6 +1571,9 @@
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>D:\Tesis\PrototipoJuego\Prototipo_Tesis\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>D:\Tesis\PrototipoJuego\Prototipo_Tesis\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>D:\Tesis\PrototipoJuego\Prototipo_Tesis\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
