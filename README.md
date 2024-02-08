@@ -11,3 +11,4 @@ Refactor: Refactorización del código como cambios de nombre de variables o fun
 Style: Cambios de formato, tabulaciones, espacios o puntos y coma.
 
 Test: Añade tests o refactoriza uno existente.
+https://github.com/ByronSalvador/Prototipo_Tesis.git
